@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <!--================ Basic page needs ================-->
@@ -19,16 +19,14 @@
 
 </head>
 
-<body class="page__body">
+<body class='page-body'>
   <header class="page-header">
     <a class="page-header__logo">
       <img src="img/logo-small.svg" alt="Кэт энерджи лого" width="33" height="37">
-    </a>
-    <a class="page-header__logo2">
       <img src="img/logo-text.svg" alt="Кэт энерджи лого заголовок" width="101" height="18">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle visually-hidden" type="button" aria-label="Открыть меню">Открыть меню</button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -49,14 +47,14 @@
         </ul>
       </div>
     </nav>
+    <p class="page-header__title">Функциональное питание для котов</p>
+    <p class="page-header__subtitle">Занялся собой? Займись котом!</p>
     <div class="page-header__image"><img src="img/bottle.png" alt="Кэт энерджи ПРО" width="280" height="270"></div>
-    <p class="page-header__title"></p>
-    <p class="page-header__subtitle"></p>
-    <a class="page-header__button button"></a>
+    <a class="page-header__button button" target="#">Подобрать программу</a>
   </header>
 
   <main class="page-main">
-    <h1 class="visually-hidden">Кэт энерджи — программа правильнонр питания для вашего кота.</h1>
+    <h1 class="visually-hidden">Кэт энерджи — программа правильного питания для вашего кота.</h1>
     <section class="catalog">
       <div class="wrapper">
         <h2 class="visually-hidden">
@@ -83,24 +81,16 @@
           Как это работает
         </h2>
         <ul class="howitworks__list">
-          <li class="howitworks__item">
-            <div class="howitworks__icon"></div>
-            <div class="howitworks__number">1</div>
+          <li class="howitworks__item howitworks__icon">
             <p>Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="howitworks__item">
-            <div class="howitworks__icon"></div>
-            <div class="howitworks__number">2</div>
+          <li class="howitworks__item howitworks__icon">
             <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="howitworks__item">
-            <div class="howitworks__icon"></div>
-            <div class="howitworks__number">3</div>
+          <li class="howitworks__item howitworks__icon">
             <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="howitworks__item">
-            <div class="howitworks__icon"></div>
-            <div class="howitworks__number">4</div>
+          <li class="howitworks__item howitworks__icon">
             <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
@@ -123,7 +113,6 @@
               <span>
                 5 КГ
               </span>
-              <p class="liveview__subtitle">Затраты на питание:</p>
             </fieldset>
             <fieldset class="liveview__fieldset">
               <legend>затрачено времени</legend>
@@ -133,7 +122,7 @@
             </fieldset>
           </div>
           <div class="liveview__subtitle">
-            <p>Затраты на питание</p>
+            <p>Затраты на питание:</p>
             <p>15 000 РУБ.</p>
           </div>
         </div>
@@ -155,49 +144,50 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <section class="page-footer">
-      <div class="page-footer__wrapper">
-        <h2 class="visually-hidden">
-          Адрес представительства
-        </h2>
-        <div class="page-footer__map"></div>
-        <div class="page-footer__livemap"></div>
-        <div class="footer-contacts">
-          <div class="footer-contacts__wrapper">
-            <div class="footer-contacts__title">
-              Приглашаем к сотрудничеству дилеров!
-            </div>
-            <p>ул. Большая Конюшенная, д. 19/8</p>
-            <p>Санкт-Петербург</p>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <h2 class="visually-hidden">
+        Адрес представительства
+      </h2>
+      <div class="page-footer__map"></div>
+      <div class="page-footer__livemap"></div>
+      <div class="footer-contacts">
+        <div class="footer-contacts__wrapper">
+          <div class="footer-contacts__title">
+            Приглашаем к сотрудничеству дилеров!
           </div>
-        </div>
-        <div class="page-footer__logo">
-          <img src="img/logo-text.svg" alt="Кэт энерджи" width="128" height="24">
-        </div>
-        <div class="footer-social">
-          <ul class="footer-social__list">
-            <li class="footer-social__item">
-              <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy"
-                aria-label="Мы в Вконтакте"></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link footer-social__link--instagram" href="https://instagram.com/htmlacademy"
-                aria-label="Мы в
-              Инстаграме"></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link footer-social__link--facebook" href="https://fb.com/htmlacademy"
-                aria-label="Мы в Facebook"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright">
-          <a href="https://up.htmlacademy.ru/adaptive/22" target="_blank">HTML Academy</a>
+          <p>ул. Большая Конюшенная, д. 19/8</p>
+          <p>Санкт-Петербург</p>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="page-footer__logo">
+        <img src="img/logo-text.svg" alt="Кэт энерджи" width="128" height="24">
+      </div>
+      <div class="footer-social">
+        <ul class="footer-social__list">
+          <li class="footer-social__item">
+            <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy"
+              aria-label="Мы в Вконтакте"></a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link footer-social__link--instagram" href="https://instagram.com/htmlacademy"
+              aria-label="Мы в
+              Инстаграме"></a>
+          </li>
+          <li class="footer-social__item">
+            <a class="footer-social__link footer-social__link--facebook" href="https://fb.com/htmlacademy"
+              aria-label="Мы в Facebook"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright">
+        <a href="https://up.htmlacademy.ru/adaptive/22" target="_blank">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+
 
 </body>
 
