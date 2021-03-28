@@ -26,7 +26,7 @@
       <img src="img/logo-text.svg" alt="Кэт энерджи лого заголовок" width="101" height="18">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню">Открыть меню</button>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -54,110 +54,116 @@
 
     <section class="forms">
       <div class="wrapper">
-        <div class="fieldset-container">
-          <h2>
-            Заполните анкету, и мы подберем программу питания для вашего кота
-          </h2>
-          <div class="fieldset-container__wrapper">
-            <fieldset class="fieldset-container__column">
-              <div class="fieldset-container__input-wrap">
-                <label for="form-name">Имя:*</label>
-                <input class="fieldset-container__form-input form-name" id="form-name" type="text" name="form-name"
-                  placeholder="Барсик" required>
-              </div>
-              <div class="fieldset-container__input-wrap">
-                <label for="form-weight">Вес (кг):*</label>
-                <input class="fieldset-container__form-input form-weight" id="form-weight" type="text"
-                  name="form-weight" placeholder="7" required>
-              </div>
-              <div class="fieldset-container__input-wrap">
-                <label for="form-age">Возраст (лет):</label>
-                <input class="fieldset-container__form-input form-age" id="form-age" type="text" name="form-age"
-                  placeholder="7">
-              </div>
-            </fieldset>
-            <fieldset class="fieldset-container__column">
-              <ul class="fieldset-container__fieldset-list list-reset">
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="slim" value="slim" id="filter-slim" checked>
-                  <label class="fieldset-container__filter-label" for="filter-slim">Похудение</label>
-                </li>
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="mass" value="fixed" id="filter-mass">
-                  <label class="fieldset-container__filter-label" for="filter-mass">Набор массы</label>
-                </li>
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="advice" value="advice" id="filter-advice">
-                  <label class="fieldset-container__filter-label" for="filter-advice">Не знаю (Нужен ваш
-                    совет)</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-        </div>
-
-        <fieldset class="fieldset-container">
-          <legend>
-            Контактные данные (владельца кота)
-          </legend>
-          <div class="fieldset-container__wrapper">
-            <div class="fieldset-container__input-wrap">
-              <label for="form-mail">E-mail:*</label>
-              <input class="fieldset-container__form-input form-mail" id="form-mail" type="text" name="form-mail"
-                placeholder="kuklachev@gmail.com" required>
-            </div>
-            <div class="fieldset-container__input-wrap">
-              <label for="form-phone">Телефон:*</label>
-              <input class="fieldset-container__form-input form-phone" id="form-phone" type="text" name="form-phone"
-                placeholder="8 (960) 900-60-90" required>
+        <form class="forms__application" action="https://echo.htmlacademy.ru" method="post">
+          <div class="fieldset-container">
+            <h2>
+              Заполните анкету, и мы подберем программу питания для вашего кота
+            </h2>
+            <div class="fieldset-container__wrapper">
+              <fieldset class="fieldset-container__column">
+                <div class="fieldset-container__input-wrap">
+                  <label for="form-name">Имя:<sup>*</sup></label>
+                  <input class="fieldset-container__form-input form-name" id="form-name" type="text" name="form-name"
+                    placeholder="Барсик" required>
+                </div>
+                <div class="fieldset-container__input-wrap">
+                  <label for="form-weight">Вес (кг):<sup>*</sup></label>
+                  <input class="fieldset-container__form-input form-weight" id="form-weight" type="text"
+                    name="form-weight" placeholder="7" required>
+                </div>
+                <div class="fieldset-container__input-wrap">
+                  <label for="form-age">Возраст (лет):</label>
+                  <input class="fieldset-container__form-input form-age" id="form-age" type="text" name="form-age"
+                    placeholder="7">
+                </div>
+              </fieldset>
+              <fieldset class="fieldset-container__column">
+                <ul class="fieldset-container__fieldset-list list-reset">
+                  <li class="fieldset-container__filter-option filter-radio">
+                    <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
+                      name="slim" value="slim" id="filter-slim" checked>
+                    <label class="fieldset-container__filter-label" for="filter-slim">Похудение</label>
+                  </li>
+                  <li class="fieldset-container__filter-option filter-radio">
+                    <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
+                      name="mass" value="fixed" id="filter-mass">
+                    <label class="fieldset-container__filter-label" for="filter-mass">Набор массы</label>
+                  </li>
+                  <li class="fieldset-container__filter-option filter-radio">
+                    <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
+                      name="advice" value="advice" id="filter-advice">
+                    <label class="fieldset-container__filter-label" for="filter-advice">Не знаю (Нужен ваш
+                      совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
           </div>
-        </fieldset>
 
-        <fieldset class="fieldset-container">
-          <legend>
-            Комментарий
-          </legend>
-          <div class="fieldset-container__input-wrap">
-            <label for="form-comments">E-mail:*</label>
-            <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
-              id="form-comments" rows="6" name="form-comments"
-              placeholder="Расскажите обо всех повАдках кота"></textarea>
-          </div>
-        </fieldset>
+          <fieldset class="fieldset-container">
+            <legend>
+              Контактные данные (владельца кота)
+            </legend>
+            <div class="fieldset-container__wrapper">
+              <div class="fieldset-container__input-wrap">
+                <label for="form-mail">E-mail:<sup>*</sup></label>
+                <input class="fieldset-container__form-input form-mail" id="form-mail" type="email" name="form-mail"
+                  placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="fieldset-container__input-wrap">
+                <label for="form-phone">Телефон:<sup>*</sup></label>
+                <input class="fieldset-container__form-input form-phone" id="form-phone" type="tel" name="form-phone"
+                  placeholder="8 (960) 900-60-90" required>
+              </div>
+            </div>
+          </fieldset>
 
-        <fieldset class="fieldset-container">
-          <legend>
-            Дополнительно
-          </legend>
-          <ul class="fieldset-container__fieldset-list list-reset">
-            <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
-              <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
-                type="checkbox" name="sugarfree" id="filter-sugarfree" checked>
-              <label class="fieldset-container__filter-label" for="filter-sugarfree">Сахарозаменитель</label>
-            </li>
-            <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
-              <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
-                type="checkbox" name="water" id="filter-water">
-              <label class="fieldset-container__filter-label" for="filter-water">Питьевая вода</label>
-            </li>
-            <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
-              <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
-                type="checkbox" name="milk" id="filter-milk" checked>
-              <label class="fieldset-container__filter-label" for="filter-milk">Молоко</label>
-            </li>
-            <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
-              <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
-                type="checkbox" name="vitamins" id="filter-vitamins">
-              <label class="fieldset-container__filter-label" for="filter-vitamins">Витамины</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button forms__button" type="submit">Отправить заявку</button>
-        <p>* — Обязательные поля</p>
+          <fieldset class="fieldset-container">
+            <legend>
+              Комментарий
+            </legend>
+            <div class="fieldset-container__input-wrap">
+              <label for="form-comments"></label>
+              <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
+                id="form-comments" rows="6" name="form-comments"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset-container">
+            <legend>
+              Дополнительно
+            </legend>
+            <ul class="fieldset-container__fieldset-list list-reset">
+              <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
+                <input
+                  class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
+                  type="checkbox" name="sugarfree" id="filter-sugarfree" checked>
+                <label class="fieldset-container__filter-label" for="filter-sugarfree">Сахарозаменитель</label>
+              </li>
+              <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
+                <input
+                  class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
+                  type="checkbox" name="water" id="filter-water">
+                <label class="fieldset-container__filter-label" for="filter-water">Питьевая вода</label>
+              </li>
+              <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
+                <input
+                  class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
+                  type="checkbox" name="milk" id="filter-milk" checked>
+                <label class="fieldset-container__filter-label" for="filter-milk">Молоко</label>
+              </li>
+              <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
+                <input
+                  class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
+                  type="checkbox" name="vitamins" id="filter-vitamins">
+                <label class="fieldset-container__filter-label" for="filter-vitamins">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button forms__button" type="submit">Отправить заявку</button>
+          <p><sup>*</sup> — Обязательные поля</p>
+        </form>
       </div>
     </section>
   </main>
