@@ -1,0 +1,81 @@
+// Начните писать стили здесь
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+
+
+.page-body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $basic-black;
+  background-color: $background-color;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after,
+html {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.button {
+  @include global-font;
+  background: $basic-green;
+  color: $basic-white;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 26px 14px 26px;
+  opacity: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background: $basic-green-2;
+    color: $basic-white;
+  }
+
+  &:focus,
+  &:active {
+    color: $basic-white-transparent;
+  }
+}
