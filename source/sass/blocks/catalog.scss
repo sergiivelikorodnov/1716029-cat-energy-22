@@ -1,0 +1,74 @@
+.catalog__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 100px;
+}
+
+.catalog__title {
+  @include font(24px, 34px, $basic-black);
+  @include font-uppercase;
+  text-align: left;
+  padding-left: 85px;
+  padding-top: 10px;
+}
+
+.catalog__article—slim::before {
+  @include size(50px, 53px);
+  content: "";
+  background-image: url("/img/catalog-cat-icon1.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  margin-left: 10px;
+}
+
+
+.catalog__article—pro::before {
+  @include size(67px, 50px);
+  content: "";
+  background-image: url("/img/catalog-cat-icon2.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.catalog__article {
+  padding: 25px;
+  position: relative;
+  background-color: $basic-grey;
+  margin-bottom: 20px;
+}
+
+.catalog__article p {
+  @include font(14px, 18px, $special-dark-grey, 400, Arial);
+  padding-left: 10px;
+  position: relative;
+
+  &:nth-last-child(2)::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: $grey-line;
+    left: 0;
+    width: 100%;
+    bottom: -15px;
+  }
+}
+
+.catalog__button {
+  @include font(16px, 16px, $basic-black);
+  @include font-uppercase;
+  position: relative;
+  display: block;
+  margin-top: 30px;
+  margin-left: 10px;
+
+  &::after {
+    @include size(32px, 12px);
+    content: "";
+    background-image: url("/img/catalog-arrow.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 3px;
+  }
+}

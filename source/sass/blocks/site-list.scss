@@ -1,0 +1,6 @@
+.site-list__item a {
+  @include font(20px, 20px, $basic-black, 500);
+  @include font-uppercase;
+  text-align: сenter;
+  padding: 22px 0 22px 0;
+}

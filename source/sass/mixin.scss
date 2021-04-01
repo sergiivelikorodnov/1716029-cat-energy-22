@@ -1,0 +1,20 @@
+@mixin global-font {
+  font-family: "Oswald", sans-serif;
+}
+
+@mixin font($size, $lineheight, $color, $weight:400, $family:"Oswald") {
+  font-family: $family;
+  font-size: $size;
+  line-height: $lineheight;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin font-uppercase($transform: uppercase) {
+  text-transform: $transform;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}

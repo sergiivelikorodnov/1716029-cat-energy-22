@@ -13,72 +13,14 @@
   justify-content: space-between;
 }
 
-
-.main-nav__list {
-  /*display: flex;*/
-  flex-wrap: wrap;
-  padding-top: 42px;
-  display: none;
-}
-
-.site-list__item a {
-  @include global-font;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $basic-black;
-  text-align: сenter;
-  padding: 22px 0 22px 0;
-}
-
-.main-nav {
-  text-align: right;
-}
-
-.main-nav__toggle {
-  display: inline-block;
-  background-color: $basic-black;
-  width: 24px;
-  height: 3px;
-  padding: 0;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-
-  &::before {
-    transform: translate(0, -9px);
-    content: "";
-    display: block;
-    background-color: $basic-black;
-    width: 24px;
-    height: 3px;
-  }
-
-  &::after {
-    transform: translate(0, 6px);
-    content: "";
-    display: block;
-    background-color: $basic-black;
-    width: 24px;
-    height: 3px;
-  }
-}
-
 .page-header__title {
-  @include global-font;
-  font-size: 36px;
-  line-height: 36px;
+  @include font(36px, 36px, $basic-white);
   text-align: center;
-  color: $basic-white;
 }
 
 .page-header__subtitle {
-  @include global-font;
-  font-size: 14px;
-  line-height: 14px;
+  @include font(14px, 14px, $basic-white);
   text-transform: uppercase;
-  color: $basic-white;
   text-align: center;
 }
 
