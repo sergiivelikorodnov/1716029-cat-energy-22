@@ -13,3 +13,31 @@
     padding-right: 0;
   }
 }
+
+.footer-social__link {
+  &:hover .footer-social__svg-icon path {
+    fill: $basic-green;
+  }
+
+  &:focus .footer-social__svg-icon path {
+    fill: $basic-green;
+  }
+
+  &:active .footer-social__svg-icon path {
+    fill: $basic-green;
+    opacity: 0.3;
+  }
+
+  &:hover .footer-social__svg-icon2 path {
+    stroke: $basic-green;
+  }
+
+  &:focus .footer-social__svg-icon2 path {
+    stroke: $basic-green;
+  }
+
+  &:active .footer-social__svg-icon2 path {
+    stroke: $basic-green;
+    opacity: 0.3;
+  }
+}
