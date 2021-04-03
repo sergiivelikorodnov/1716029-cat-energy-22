@@ -2,10 +2,13 @@
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 100px;
+  padding-top: 37px;
+  padding-bottom: 20px;
 }
 
 .howitworks__item {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+  padding-left: 80px;
 }
 
 .howitworks__icon::before {
@@ -13,6 +16,7 @@
   content: "";
   background-repeat: no-repeat;
   position: absolute;
+  left: 20px;
 }
 
 .howitworks__icon1::before {
@@ -32,6 +36,6 @@
 }
 
 .howitworks__item p {
-  @include font(14px, 18px, $special-dark-grey, 400, Arial);
-  padding-left: 70px;
+  @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
+  margin: 0 auto;
 }

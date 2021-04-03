@@ -1,5 +1,6 @@
 .page-body {
-  @include font(16px, 24px, $basic-black, 400, "Arial");
+  @include font(16px, 24px, $basic-black, 400, $secondary-font-family);
+  min-width: 320px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -46,10 +47,15 @@ html {
 }
 
 .wrapper {
-  width: 1220px;
+  width: 100%;
+  max-width: 767px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
 }
 
 .title {
   @include font(36px, 40px, $basic-black);
+  margin: 0 auto;
 }

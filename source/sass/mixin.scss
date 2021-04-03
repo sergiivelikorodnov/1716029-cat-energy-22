@@ -1,8 +1,8 @@
 @mixin global-font {
-  font-family: "Oswald", sans-serif;
+  font-family: $primary-font-family;
 }
 
-@mixin font($size, $lineheight, $color, $weight:400, $family:"Oswald") {
+@mixin font($size, $lineheight, $color, $weight:400, $family: $primary-font-family) {
   font-family: $family;
   font-size: $size;
   line-height: $lineheight;

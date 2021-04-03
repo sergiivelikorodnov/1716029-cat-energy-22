@@ -5,30 +5,31 @@
 }
 
 .catalog__title {
-  @include font(24px, 34px, $basic-black);
+  @include font(24px, 37px, $basic-black);
   @include font-uppercase;
   text-align: left;
-  padding-left: 85px;
+  padding-left: 75px;
   padding-top: 10px;
+  padding-bottom: 14px;
 }
 
-.catalog__article—slim::before {
+.catalog__article--slim::before {
   @include size(50px, 53px);
   content: "";
   background-image: url("/img/catalog-cat-icon1.svg");
   background-repeat: no-repeat;
   position: absolute;
   display: block;
-  margin-left: 10px;
 }
 
 
-.catalog__article—pro::before {
+.catalog__article--pro::before {
   @include size(67px, 50px);
   content: "";
   background-image: url("/img/catalog-cat-icon2.svg");
   background-repeat: no-repeat;
   position: absolute;
+  left: 15px;
 }
 
 .catalog__article {
@@ -36,31 +37,28 @@
   position: relative;
   background-color: $basic-grey;
   margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__article p {
-  @include font(14px, 18px, $special-dark-grey, 400, Arial);
-  padding-left: 10px;
+  @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
   position: relative;
-
-  &:nth-last-child(2)::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: $grey-line;
-    left: 0;
-    width: 100%;
-    bottom: -15px;
-  }
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 23px;
+  border-bottom: 1px $grey-line solid;
 }
 
 .catalog__button {
   @include font(16px, 16px, $basic-black);
   @include font-uppercase;
   position: relative;
-  display: block;
-  margin-top: 30px;
-  margin-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  padding-right: 40px;
 
   &::after {
     @include size(32px, 12px);
@@ -68,7 +66,7 @@
     background-image: url("/img/catalog-arrow.svg");
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 15px;
-    margin-top: 3px;
+    right: 0;
+    top: 1px;
   }
 }

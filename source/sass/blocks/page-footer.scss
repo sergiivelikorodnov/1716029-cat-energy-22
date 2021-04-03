@@ -5,7 +5,7 @@
 .page-footer__bottom-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  text-align: center;
 }
 
 .page-footer__map-wrapper {
@@ -34,27 +34,32 @@
   background-size: cover;
 }
 
-.page-footer__copyright a {
-  @include font(16px, 18px, $special-dark-grey, 400, Arial);
-}
-
 .page-footer__copyright-link {
+  @include font(16px, 18px, $special-dark-grey, 400, Arial);
   display: flex;
   justify-content: space-between;
+  padding: 12px 20px 14px 20px;
+
+  .page-footer__logo-academy {
+    margin-top: 10px;
+  }
+
+  &:hover .page-footer__logo-academy path {
+    fill: $basic-green;
+  }
+
+  &:focus .page-footer__logo-academy path {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__logo {
-  align-self: center;
   padding-top: 25px;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: $grey-line;
-    left: 0;
-    width: 100%;
-    bottom: -15px;
-  }
+  border-bottom: 1px $grey-line solid;
+  padding-bottom: 19px;
 }

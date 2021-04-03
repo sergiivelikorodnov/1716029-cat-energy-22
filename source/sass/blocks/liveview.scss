@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
+  padding-top: 10px;
 }
 
 .liveview__cats-wrapper img {
@@ -13,8 +14,12 @@
   margin: auto;
 }
 
+.liveview__description {
+  padding-top: 20px;
+}
+
 .liveview__description p {
-  @include font(14px, 18px, $special-dark-grey, 400, Arial);
+  @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
 }
 
 .liveview__fieldset span {
@@ -22,7 +27,7 @@
   @include font-uppercase;
   display: block;
   text-align: center;
-  padding: 15px;
+  padding: 5px;
 }
 
 .liveview__fieldset {
@@ -30,21 +35,23 @@
   box-sizing: border-box;
   border: solid $special-grey 1px;
   border-radius: 3px;
+  height: 56px;
 }
 
 .liveview__fieldset legend {
-  @include font(12px, 12px, $special-dark-grey, 400, Arial);
+  @include font(12px, 12px, $special-dark-grey, 400, $secondary-font-family);
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
   padding: 0 15px;
-  background: $background-color;
+  background: $section-grey;
+  text-align: center;
 }
 
 .liveview__subtitle {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 45%;
   column-gap: 10px;
 }
 
@@ -60,7 +67,7 @@
 
 .liveview__compare {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -77,6 +84,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   position: relative;
+  margin: 0 2px 0 2px;
 
   &::before {
     @include size(35px, 6px);

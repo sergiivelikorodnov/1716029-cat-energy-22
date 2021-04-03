@@ -1,17 +1,8 @@
 .footer-social {
-  align-self: center;
   padding-top: 25px;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: $grey-line;
-    left: 0;
-    width: 100%;
-    bottom: -15px;
-  }
+  border-bottom: 1px $grey-line solid;
+  padding-bottom: 18px;
 }
 
 .footer-social__list li {
