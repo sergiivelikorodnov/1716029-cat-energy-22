@@ -39,9 +39,14 @@
   display: flex;
   justify-content: space-between;
   padding: 12px 20px 14px 20px;
+  transition: all 0.35s ease-in-out;
 
   .page-footer__logo-academy {
     margin-top: 10px;
+  }
+
+  .page-footer__logo-academy path {
+    transition: all 0.35s ease-in-out;
   }
 
   &:hover .page-footer__logo-academy path {
@@ -62,4 +67,14 @@
   position: relative;
   border-bottom: 1px $grey-line solid;
   padding-bottom: 19px;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &active {
+    opacity: 0.3;
+  }
 }

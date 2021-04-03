@@ -59,6 +59,7 @@
   display: inline-block;
   margin-top: 20px;
   padding-right: 40px;
+  transition: all 0.35s ease-in-out;
 
   &::after {
     @include size(32px, 12px);
@@ -68,5 +69,15 @@
     position: absolute;
     right: 0;
     top: 1px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scale(1.1) translateX(5px);
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
   }
 }

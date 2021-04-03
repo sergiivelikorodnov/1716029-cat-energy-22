@@ -14,15 +14,17 @@
   }
 }
 
+.footer-social__svg-icon path,
+.footer-social__svg-icon2 path {
+  transition: all 0.35s ease-in-out;
+}
+
 .footer-social__link {
   &:hover .footer-social__svg-icon path {
     fill: $basic-green;
   }
 
-  &:focus .footer-social__svg-icon path {
-    fill: $basic-green;
-  }
-
+  &:focus .footer-social__svg-icon path,
   &:active .footer-social__svg-icon path {
     fill: $basic-green;
     opacity: 0.3;
@@ -32,10 +34,7 @@
     stroke: $basic-green;
   }
 
-  &:focus .footer-social__svg-icon2 path {
-    stroke: $basic-green;
-  }
-
+  &:focus .footer-social__svg-icon2 path,
   &:active .footer-social__svg-icon2 path {
     stroke: $basic-green;
     opacity: 0.3;
