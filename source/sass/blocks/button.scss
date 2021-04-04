@@ -1,12 +1,12 @@
 .button {
   @include global-font;
+  display: block;
   background: $basic-green;
   color: $basic-white;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
   padding: 14px 26px 14px 26px;
-  opacity: 100%;
   cursor: pointer;
   transition: all 0.35s ease-in-out;
 

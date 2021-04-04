@@ -17,7 +17,7 @@
   height: 362px;
   margin: 0 auto;
   position: relative;
-  background-image: url("/img/google-map.jpg");
+  background-image: url("../img/google-map.jpg");
   background-color: $background-color;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,16 +29,16 @@
   top: 50%;
   left: 50%;
   z-index: 1;
-  background-image: url("/img/google-map-pin.svg");
+  background-image: url("../img/google-map-pin.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .page-footer__copyright-link {
-  @include font(16px, 18px, $special-dark-grey, 400, Arial);
+  @include font(16px, 18px, $special-dark-grey, 400, $secondary-font-family);
   display: flex;
   justify-content: space-between;
-  padding: 12px 20px 14px 20px;
+  padding: 12px 0 14px 0;
   transition: all 0.35s ease-in-out;
 
   .page-footer__logo-academy {
