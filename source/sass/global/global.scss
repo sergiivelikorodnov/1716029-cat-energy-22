@@ -1,0 +1,61 @@
+.page-body {
+  @include font(16px, 24px, $basic-black, 400, $secondary-font-family);
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $basic-white;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after,
+html {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 767px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
+
+.title {
+  @include font(36px, 40px, $basic-black);
+  margin: 0 auto;
+}

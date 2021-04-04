@@ -1,1 +1,14 @@
-// Начните писать стили здесь
+@import "variables.scss";
+@import "mixin.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/site-list.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/catalog.scss";
+@import "blocks/howitworks.scss";
+@import "blocks/liveview.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/footer-social.scss";
+@import "blocks/footer-contacts.scss";

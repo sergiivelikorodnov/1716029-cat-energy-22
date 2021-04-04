@@ -1,0 +1,43 @@
+.howitworks__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 100px;
+  padding-top: 37px;
+  row-gap: 20px;
+}
+
+.howitworks__item {
+  padding-bottom: 25px;
+  padding-left: 80px;
+  position: relative;
+}
+
+.howitworks__icon::before {
+  @include size(60px, 60px);
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.howitworks__icon1::before {
+  background-image: url("../img/howitworks-icon1.svg");
+}
+
+.howitworks__icon2::before {
+  background-image: url("../img/howitworks-icon2.svg");
+}
+
+.howitworks__icon3::before {
+  background-image: url("../img/howitworks-icon3.svg");
+}
+
+.howitworks__icon4::before {
+  background-image: url("../img/howitworks-icon4.svg");
+}
+
+.howitworks__item p {
+  @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
+  margin: 0 auto;
+}

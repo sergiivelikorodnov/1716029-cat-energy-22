@@ -1,0 +1,19 @@
+.footer-contacts__wrapper {
+  background-color: $basic-white;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contacts__title {
+  @include font(16px, 18px, $special-black);
+  @include font-uppercase;
+  padding-right: 20px;
+  width: 50%;
+}
+
+.footer-contacts__address p {
+  @include font(14px, 20px, $special-dark-grey, 400, $secondary-font-family);
+  padding: 0;
+  margin: 0;
+}

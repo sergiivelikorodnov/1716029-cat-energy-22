@@ -1,0 +1,22 @@
+.site-list__item a {
+  @include font(20px, 20px, $basic-black, 500);
+  @include font-uppercase;
+  padding: 22px 0 22px 0;
+  display: block;
+  text-align: center;
+  transition: opacity 0.35s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__item {
+  position: relative;
+  border-top: 1px $grey-line solid;
+}
