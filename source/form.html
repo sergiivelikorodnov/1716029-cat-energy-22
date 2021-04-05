@@ -57,80 +57,73 @@
           <h2>
             Заполните анкету, и мы подберем программу питания для вашего кота
           </h2>
-          <div class="fieldset-container__wrapper">
-            <fieldset class="fieldset-container__column1 wrapper">
-              <div class="fieldset-container__input-wrap">
-                <label for="form-name">Имя:<sup>*</sup></label>
-                <input class="fieldset-container__form-input form-name" id="form-name" type="text" name="stats"
-                  placeholder="Барсик" required>
-              </div>
-              <div class="fieldset-container__input-wrap">
-                <label for="form-weight">Вес (кг):<sup>*</sup></label>
-                <input class="fieldset-container__form-input form-weight" id="form-weight" type="text" name="stats"
-                  placeholder="7" required>
-              </div>
-              <div class="fieldset-container__input-wrap">
-                <label for="form-age">Возраст (лет):</label>
-                <input class="fieldset-container__form-input form-age" id="form-age" type="text" name="stats"
-                  placeholder="7">
-              </div>
-            </fieldset>
-            <fieldset class="fieldset-container__column2">
-              <ul class="fieldset-container__fieldset-list list-reset">
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="slim" value="slim" id="filter-slim">
-                  <label class="fieldset-container__filter-label" for="filter-slim">Похудение</label>
-                </li>
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="mass" value="fixed" id="filter-mass">
-                  <label class="fieldset-container__filter-label" for="filter-mass">Набор массы</label>
-                </li>
-                <li class="fieldset-container__filter-option filter-radio">
-                  <input class="visually-hidden fieldset-container__filter-input-radio filter-input" type="radio"
-                    name="advice" value="advice" id="filter-advice" checked>
-                  <label class="fieldset-container__filter-label" for="filter-advice">Не знаю (Нужен ваш
-                    совет)</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+          <fieldset class="fieldset-container__column1 wrapper">
+            <div class="fieldset-container__input-wrap">
+              <label for="form-name">Имя:<sup>*</sup></label>
+              <input class="fieldset-container__form-input form-name" id="form-name" type="text" name="stats"
+                placeholder="Барсик" required>
+            </div>
+            <div class="fieldset-container__input-wrap">
+              <label for="form-weight">Вес (кг):<sup>*</sup></label>
+              <input class="fieldset-container__form-input form-weight" id="form-weight" type="text" name="stats"
+                placeholder="7" required>
+            </div>
+            <div class="fieldset-container__input-wrap">
+              <label for="form-age">Возраст (лет):</label>
+              <input class="fieldset-container__form-input form-age" id="form-age" type="text" name="stats"
+                placeholder="7">
+            </div>
+          </fieldset>
+          <fieldset class="fieldset-container__column2">
+            <ul class="fieldset-container__fieldset-list list-reset">
+              <li class="fieldset-container__filter-option filter-radio">
+                <input class="visually-hidden fieldset-container__filter-input-radio" type="radio" name="slim"
+                  value="slim" id="filter-slim">
+                <label class="fieldset-container__filter-label" for="filter-slim">Похудение</label>
+              </li>
+              <li class="fieldset-container__filter-option filter-radio">
+                <input class="visually-hidden fieldset-container__filter-input-radio" type="radio" name="slim"
+                  value="fixed" id="filter-mass">
+                <label class="fieldset-container__filter-label" for="filter-mass">Набор массы</label>
+              </li>
+              <li class="fieldset-container__filter-option filter-radio">
+                <input class="visually-hidden fieldset-container__filter-input-radio" type="radio" name="slim"
+                  value="advice" id="filter-advice" checked>
+                <label class="fieldset-container__filter-label" for="filter-advice">Не знаю (Нужен ваш
+                  совет)</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
 
-        <fieldset class="fieldset-container">
+        <fieldset class="fieldset-container wrapper">
           <h3 class="fieldset-container__title">
             <span>Контактные данные (владельца кота)</span>
           </h3>
-          <div class="fieldset-container__wrapper">
-            <div class="fieldset-container__input-wrap">
-              <label for="form-mail">E-mail:<sup>*</sup></label>
-              <input class="fieldset-container__form-input .fieldset-container__form-mail" id="form-mail" type="email"
-                name="form-mail" placeholder="kuklachev@gmail.com" required>
-            </div>
-            <div class="fieldset-container__input-wrap">
-              <label for="form-phone">Телефон:<sup>*</sup></label>
-              <input class="fieldset-container__form-input .fieldset-container__form-phone" id="form-phone" type="tel"
-                name="form-phone" placeholder="8 (960) 900-60-90" required>
-            </div>
+          <div class="fieldset-container__input-wrap">
+            <label for="form-mail">E-mail:<sup>*</sup></label>
+            <input class="fieldset-container__form-input fieldset-container__form-mail" id="form-mail" type="email"
+              name="form-mail" placeholder="kuklachev@gmail.com" required>
+          </div>
+          <div class="fieldset-container__input-wrap">
+            <label for="form-phone">Телефон:<sup>*</sup></label>
+            <input class="fieldset-container__form-input fieldset-container__form-phone" id="form-phone" type="tel"
+              name="form-phone" placeholder="8 (960) 900-60-90" required>
           </div>
         </fieldset>
 
-        <fieldset class="fieldset-container">
+        <fieldset class="fieldset-container wrapper">
           <h3 class="fieldset-container__title">
             <span>Комментарий</span>
           </h3>
-          <div class="fieldset-container__input-wrap">
-            <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
-              id="form-comments" rows="6" name="form-comments"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
+          <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
+            id="form-comments" rows="6" name="form-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="fieldset-container">
-          <legend>
+        <fieldset class="fieldset-container wrapper">
+          <h3 class="fieldset-container__title">
             Дополнительно
-          </legend>
+          </h3>
           <ul class="fieldset-container__fieldset-list list-reset">
             <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
               <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
@@ -154,8 +147,8 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button forms__button" type="submit">Отправить заявку</button>
-        <p><sup>*</sup> — Обязательные поля</p>
+        <button class="button forms__button wrapper" type="submit">Отправить заявку</button>
+        <p class="forms__description"><sup>*</sup> — Обязательные поля</p>
       </form>
     </section>
   </main>
@@ -165,7 +158,7 @@
       Адрес представительства
     </h2>
     <div class="footer-contacts">
-      <div class="footer-contacts__wrapper">
+      <div class="footer-contacts__wrapper footer-contacts__wrapper--grey">
         <div class="footer-contacts__title">
           Приглашаем к сотрудничеству дилеров!
         </div>

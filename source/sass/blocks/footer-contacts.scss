@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.footer-contacts__wrapper--grey {
+  background-color: $basic-grey;
+}
+
 .footer-contacts__title {
   @include font(16px, 18px, $special-black);
   @include font-uppercase;
