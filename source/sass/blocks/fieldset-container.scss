@@ -1,5 +1,5 @@
 .fieldset-container {
-  padding-top: 20px;
+  padding: 0;
   margin: 0;
   border: 0;
 }
@@ -25,6 +25,7 @@
 
 .fieldset-container label {
   padding-right: 13px;
+  flex-shrink: 0;
 }
 
 .fieldset-container__input-wrap {
@@ -41,6 +42,9 @@
 
 .fieldset-container__column1 {
   border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
 }
 
 .fieldset-container legend {
@@ -60,7 +64,7 @@
 
 .fieldset-container__input-wrap input {
   height: 46px;
-  padding: 13px;
+  padding: 13px 50px 13px 13px;
   width: 100%;
   border: 1px solid $basic-light-grey;
   position: relative;
@@ -129,11 +133,15 @@
   margin: 0;
   padding-bottom: 38px;
   padding-right: 20px;
+  padding-left: 20px;
   overflow: hidden;
+  padding-top: 25px;
+  position: relative;
 
   span {
-    display: inline;
+    display: inline-block;
     position: relative;
+    max-width: 181px;
   }
 
   &::after {

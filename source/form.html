@@ -57,7 +57,7 @@
           <h2>
             Заполните анкету, и мы подберем программу питания для вашего кота
           </h2>
-          <fieldset class="fieldset-container__column1 wrapper">
+          <fieldset class="fieldset-container__column1">
             <div class="fieldset-container__input-wrap">
               <label for="form-name">Имя:<sup>*</sup></label>
               <input class="fieldset-container__form-input form-name" id="form-name" type="text" name="stats"
@@ -96,35 +96,38 @@
           </fieldset>
         </div>
 
-        <fieldset class="fieldset-container wrapper">
+        <fieldset class="fieldset-container">
           <h3 class="fieldset-container__title">
             <span>Контактные данные (владельца кота)</span>
           </h3>
-          <div class="fieldset-container__input-wrap">
+          <div class="fieldset-container__input-wrap wrapper">
             <label for="form-mail">E-mail:<sup>*</sup></label>
             <input class="fieldset-container__form-input fieldset-container__form-mail" id="form-mail" type="email"
               name="form-mail" placeholder="kuklachev@gmail.com" required>
           </div>
-          <div class="fieldset-container__input-wrap">
+          <div class="fieldset-container__input-wrap wrapper">
             <label for="form-phone">Телефон:<sup>*</sup></label>
             <input class="fieldset-container__form-input fieldset-container__form-phone" id="form-phone" type="tel"
               name="form-phone" placeholder="8 (960) 900-60-90" required>
           </div>
         </fieldset>
 
-        <fieldset class="fieldset-container wrapper">
+        <fieldset class="fieldset-container ">
           <h3 class="fieldset-container__title">
             <span>Комментарий</span>
           </h3>
-          <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
-            id="form-comments" rows="6" name="form-comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="wrapper">
+            <textarea class="fieldset-container__form-input fieldset-container__form-message-field" minlength="20"
+              id="form-comments" rows="6" name="form-comments"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
 
-        <fieldset class="fieldset-container wrapper">
+        <fieldset class="fieldset-container">
           <h3 class="fieldset-container__title">
-            Дополнительно
+            <span> Дополнительно</span>
           </h3>
-          <ul class="fieldset-container__fieldset-list list-reset">
+          <ul class="fieldset-container__fieldset-list list-reset wrapper">
             <li class="fieldset-container__filter-option fieldset-container__filter-checkbox">
               <input class="visually-hidden fieldset-container__filter-input-checkbox fieldset-container__filter-input"
                 type="checkbox" name="sugarfree" id="filter-sugarfree" checked>
