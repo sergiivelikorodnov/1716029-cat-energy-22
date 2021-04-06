@@ -3,13 +3,14 @@
   grid-template-columns: 1fr;
   column-gap: 100px;
   padding-top: 37px;
-  row-gap: 20px;
+  row-gap: 25px;
+  padding-bottom: 46px;
 }
 
 .howitworks__item {
-  padding-bottom: 25px;
   padding-left: 80px;
   position: relative;
+  min-height: 54px;
 }
 
 .howitworks__icon::before {

@@ -27,6 +27,12 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,10 +58,10 @@ html {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 30px;
 }
 
 .title {
   @include font(36px, 40px, $basic-black);
   margin: 0 auto;
+  padding-top: 25px;
 }
