@@ -1,0 +1,21 @@
+.banner-sidebar {
+  background-image: url("../img/banner-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: $basic-green;
+  padding-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    @include font(16px, 20px, $basic-white, 400, $secondary-font-family);
+    text-align: center;
+    padding: 35px 60px 16px 43px;
+    position: relative;
+  }
+}
