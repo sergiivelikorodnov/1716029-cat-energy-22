@@ -63,4 +63,5 @@ body {
 .title {
   @include font(36px, 40px, $basic-black);
   margin: 0 auto;
+  padding-top: 25px;
 }
