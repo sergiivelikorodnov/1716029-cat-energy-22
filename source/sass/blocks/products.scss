@@ -9,15 +9,11 @@
 
 .products__link {
   width: 50%;
-
-  img {
-    display: block;
-    margin: auto;
-  }
 }
 
 .products__title {
   @include font(16px, 20px, $special-dark-grey-2);
+  @include font-uppercase;
   margin: 0 auto;
 }
 
@@ -48,6 +44,19 @@
   @include font-uppercase;
   text-align: center;
   padding-top: 7px;
+  position: relative;
+
+  &::before {
+    @include size(30px, 30px);
+    position: absolute;
+    left: 50%;
+    top: -45px;
+    margin-left: -15px;
+    content: "";
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .products__title-all-details {
@@ -62,7 +71,7 @@
 }
 
 .products__details-all {
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 25px;
   margin-top: 0;
 }
