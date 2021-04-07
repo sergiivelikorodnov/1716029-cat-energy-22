@@ -60,10 +60,27 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1199px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    max-width: 1440px;
+  }
 }
 
 .title {
   @include font(36px, 40px, $basic-black);
   margin: 0 auto;
   padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(60px, 60px);
+    padding-top: 45px;
+  }
 }
