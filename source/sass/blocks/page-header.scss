@@ -1,10 +1,20 @@
-// Начните писать стили здесь
 .page-header {
   background-color: $basic-white;
 }
 
 .page-header__content {
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 180px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding-bottom: 60px;
+  }
+}
+
+.page-header__content-text {
+  width: 720px;
 }
 
 .page-header__top {
@@ -20,15 +30,44 @@
 
 .page-header__title {
   @include font(36px, 36px, $basic-white);
+  @include padding-left-right(20px, 20px);
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  z-index: 1;
+  position: relative;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(60px, 60px);
+    @include padding-left-right(117px, 117px);
+    color: $basic-black;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-left-right(190px, 0);
+    padding-top: 180px;
+  }
 }
 
 .page-header__subtitle {
   @include font(14px, 14px, $basic-white);
+  @include padding-left-right(20px, 20px);
   text-transform: uppercase;
   text-align: center;
+  z-index: 1;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 20px);
+    @include padding-left-right(117px, 117px);
+    color: $basic-black;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-left-right(190px, 190px);
+  }
 }
 
 .page-header__promo {
@@ -40,23 +79,112 @@
 }
 
 .page-header__content-green {
-  background-image: url("../img/promo.jpg");
+  background-image: url("../img/promo-small.jpg");
   background-size: cover;
   background-position: center;
   background-color: $basic-green;
-  padding-top: 20px;
-  padding-bottom: 150px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 302px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include size(720px, 694px);
+    background-image: url("../img/promo-big.jpg");
+    background-color: $basic-green;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .page-header__content-green-overlay {
+    background-color: $basic-green;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.85;
+    top: 0;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 }
 
 .page-header__image {
   margin: auto;
-  order: 1;
   margin-top: -120px;
+  z-index: 1;
+  position: relative;
+  top: 130px;
+
+  @media (min-width: $desktop-width) {
+    left: 39%;
+    top: 41%;
+    position: absolute;
+  }
+}
+
+.page-header__big-image {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__small-image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__medium-image {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .page-header__button {
   width: 280px;
-  order: 2;
-  padding-left: 20px;
-  padding-right: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 20px);
+    left: 117px;
+    position: absolute;
+    bottom: 593px;
+    transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 190px;
+    position: relative;
+    bottom: -37px;
+  }
 }

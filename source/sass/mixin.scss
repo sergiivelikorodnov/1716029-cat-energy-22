@@ -15,6 +15,11 @@
   font-size: $size;
 }
 
+@mixin padding-left-right($padding-left, $padding-righ) {
+  padding-left: $padding-left;
+  padding-right: $padding-righ;
+}
+
 @mixin font-uppercase($transform: uppercase) {
   text-transform: $transform;
 }

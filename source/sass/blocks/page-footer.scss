@@ -6,6 +6,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .page-footer__map-wrapper {
@@ -20,7 +27,12 @@
   background-image: url("../img/google-map.jpg");
   background-color: $background-color;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__marker {
@@ -32,6 +44,10 @@
   background-image: url("../img/google-map-pin.svg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    @include size(113px, 106px);
+  }
 }
 
 .page-footer__copyright-link {
@@ -43,6 +59,10 @@
 
   .page-footer__logo-academy {
     margin-top: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 20px;
+    }
   }
 
   .page-footer__logo-academy path {
@@ -68,6 +88,10 @@
   border-bottom: 1px $grey-line solid;
   padding-bottom: 19px;
   transition: all 0.35s ease-in-out;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 
   &:hover {
     opacity: 0.6;

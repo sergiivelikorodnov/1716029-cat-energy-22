@@ -3,6 +3,10 @@
   position: relative;
   border-bottom: 1px $grey-line solid;
   padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .footer-social li {
