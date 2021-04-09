@@ -6,10 +6,16 @@
   margin: 0 auto;
   position: relative;
   padding-bottom: 180px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
     padding-bottom: 60px;
+    max-width: 100%;
   }
 }
 

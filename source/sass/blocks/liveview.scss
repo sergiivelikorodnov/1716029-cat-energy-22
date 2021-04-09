@@ -7,11 +7,22 @@
   }
 
   @media (min-width: $desktop-width) {
+    @include padding-left-right(0, 0);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 160px, #eaeaea 160px, #eaeaea 100%);
+    border-top: none;
+  }
+}
+
+.liveview__block-aligner {
+  @media (min-width: $desktop-width) {
+    @include padding-left-right(110px, 110px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 134px;
-    background: linear-gradient(180deg, #ffffff 0%, #ffffff 160px, #eaeaea 160px, #eaeaea 100%);
-    border-top: none;
+    max-width: 1440px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -58,7 +69,12 @@
 }
 
 .liveview__section {
+  @include padding-left-right(20px, 20px);
   padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(30px, 30px);
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;

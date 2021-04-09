@@ -37,13 +37,16 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    @include background-size(200px, 212px);
+    /* @include background-size(200px, 212px); */
+    @include size(200px, 212px);
     @include align-vertical();
+    background-size: cover;
     right: 61px;
   }
 
   @media (min-width: $desktop-width) {
-    @include background-size(100px, 106px);
+    @include size(100px, 106px);
+    /* @include background-size(100px, 106px); */
     top: 100px;
     left: 52px;
   }
@@ -63,13 +66,16 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include background-size(268px, 200px);
+    /* @include background-size(268px, 200px); */
+    @include size(268px, 200px);
     @include align-vertical();
+    background-size: cover;
     right: 28px;
   }
 
   @media (min-width: $desktop-width) {
-    @include background-size(134px, 100px);
+    /* @include background-size(134px, 100px); */
+    @include size(134px, 100px);
     top: 100px;
     left: 35px;
   }
@@ -135,6 +141,11 @@
   padding-right: 40px;
   transition: all 0.35s ease-in-out;
 
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 29px);
+    padding-right: 55px;
+  }
+
   &::after {
     @include size(32px, 12px);
     @include align-vertical();
@@ -154,13 +165,5 @@
   &:focus,
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    @include font-size(20px, 29px);
-
-    &::after {
-      right: -15px;
-    }
   }
 }
