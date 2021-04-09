@@ -20,7 +20,15 @@
 }
 
 .page-header__content-text {
-  max-width: 720px;
+  background: linear-gradient(to top, $background-overlay, $background-overlay),
+    url("../img/promo-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: $basic-green;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 302px;
 }
 
 .page-header__top {
@@ -37,6 +45,7 @@
 .page-header__title {
   @include font(36px, 36px, $basic-white);
   @include padding-left-right(20px, 20px);
+  padding-top: 20px;
   text-align: center;
   z-index: 1;
   position: relative;
@@ -84,7 +93,7 @@
   padding-bottom: 22px;
 }
 
-.page-header__content-green {
+/* .page-header__content-green {
   background-image: url("../img/promo-small.jpg");
   background-size: cover;
   background-position: center;
@@ -124,7 +133,7 @@
       display: block;
     }
   }
-}
+} */
 
 .page-header__image {
   margin: auto;
@@ -177,8 +186,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
   z-index: 5;
+  margin-top: 275px;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 20px);
