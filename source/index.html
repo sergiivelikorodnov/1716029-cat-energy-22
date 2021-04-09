@@ -50,15 +50,24 @@
     <div class="page-header__promo">
       <h1 class="visually-hidden">Кэт энерджи — программа правильного питания для вашего кота.</h1>
       <div class="page-header__content">
-        <div class="page-header__content-green">
+        <div class="page-header__content-text">
           <p class="page-header__title">Функциональное питание для котов</p>
           <p class="page-header__subtitle">Занялся собой? Займись котом!</p>
+          <a class="page-header__button button" href="#">Подобрать программу</a>
+          <div class="page-header__image">
+            <img class="page-header__small-image" src="img/bottle-small.png" alt="Кэт энерджи ПРО" width="280"
+              height="270">
+            <img class="page-header__big-image" src="img/bottle-big.png" alt="Кэт энерджи ПРО большая" width="709"
+              height="609">
+            <img class="page-header__medium-image" src="img/bottle-medium.png" alt="Кэт энерджи ПРО средняя" width="552"
+              height="499">
+          </div>
         </div>
+        <!-- <div class="page-header__content-green">
+          <div class="page-header__content-green-overlay"></div>
+        </div> -->
       </div>
-      <a class="page-header__button button" href="#">Подобрать программу</a>
-      <div class="page-header__image">
-        <img src="img/bottle.png" alt="Кэт энерджи ПРО" width="280" height="270">
-      </div>
+
     </div>
   </header>
 
@@ -70,14 +79,16 @@
       <div class="catalog__grid">
         <div class="catalog__article catalog__article--slim">
           <h3 class="catalog__title">Похудение</h3>
-          <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy
+          <p class="catalog__article-description">Ваш кот весит больше собаки и почти утратил способность лазить по
+            деревьям? Пора на диету! Cat Energy
             Slim
             поможет вашему питомцу сбросить лишний вес.</p>
           <a href="#" class="catalog__button">Каталог slim</a>
         </div>
         <div class="catalog__article catalog__article--pro">
           <h3 class="catalog__title">Набор массы</h3>
-          <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
+          <p class="catalog__article-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+            Energy Pro поможет вашему коту
             нарастить
             необходимые мышцы!</p>
           <a href="#" class="catalog__button">Каталог pro</a>
@@ -91,61 +102,69 @@
       </h2>
       <ul class="howitworks__list list-reset">
         <li class="howitworks__item howitworks__icon howitworks__icon1">
-          <p>Функциональное питание содержит только полезные питательные вещества.</p>
+          <p class="howitworks__description">Функциональное питание содержит только полезные питательные вещества.</p>
+          <div class="howitworks__counter"></div>
         </li>
         <li class="howitworks__item howitworks__icon howitworks__icon2">
-          <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          <p class="howitworks__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </p>
+          <div class="howitworks__counter"></div>
         </li>
         <li class="howitworks__item howitworks__icon howitworks__icon3">
-          <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+          <p class="howitworks__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          <div class="howitworks__counter"></div>
         </li>
         <li class="howitworks__item howitworks__icon howitworks__icon4">
-          <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="howitworks__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <div class="howitworks__counter"></div>
         </li>
       </ul>
     </section>
 
     <section class="liveview">
-      <div class="wrapper">
-        <h2 class="title">
-          Живой пример
-        </h2>
-        <div class="liveview__description">
-          <p>
+      <div class="liveview__block-aligner">
+        <div class="liveview__section">
+          <h2 class="title">
+            Живой пример
+          </h2>
+          <p class="liveview__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
             изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="liveview__achievements">
-            <fieldset class="liveview__fieldset">
-              <legend>снижение веса</legend>
-              <span>
-                5 КГ
-              </span>
-            </fieldset>
-            <fieldset class="liveview__fieldset">
-              <legend>затрачено времени</legend>
-              <span>
-                60 ДНЕЙ
-              </span>
-            </fieldset>
-          </div>
-          <div class="liveview__subtitle">
-            <p>Затраты на питание:</p>
-            <p>15 000 РУБ.</p>
+          <div class="liveview__achievements-section">
+            <div class="liveview__achievements">
+              <fieldset class="liveview__fieldset">
+                <legend>снижение веса</legend>
+                <span>
+                  5 КГ
+                </span>
+              </fieldset>
+              <fieldset class="liveview__fieldset">
+                <legend>затрачено времени</legend>
+                <span>
+                  60 ДНЕЙ
+                </span>
+              </fieldset>
+            </div>
+            <div class="liveview__subtitle">
+              <p>Затраты на питание:</p>
+              <p>15 000 РУБ.</p>
+            </div>
           </div>
         </div>
         <div class="liveview__drag-slider">
           <div class="liveview__cats">
             <div class="liveview__cats-wrapper liveview__cats-wrapper--fat">
-              <img src="img/before-fat-cat.png" alt="Был Жирный кот" width="311" height="232">
+              <img src="img/cat-fat.png" alt="Был Жирный кот" width="311" height="232">
             </div>
-            <div class="liveview__cats-wrapper liveview__cats-wrapper--slim">
+            <div class="liveview__cats-wrapper liveview__cats-wrapper--slim visually-hidden">
               <img src="img/after-slim-cat.png" alt="Стал Худой кот" width="251" height="240">
             </div>
           </div>
           <div class="liveview__compare">
             <p>Было</p>
             <div class="liveview__line">
+              <div class="liveview__drag"></div>
             </div>
             <p>Стало</p>
           </div>
@@ -159,13 +178,15 @@
       Адрес представительства
     </h2>
     <div class="footer-contacts">
-      <div class="footer-contacts__wrapper">
-        <div class="footer-contacts__title">
-          Приглашаем к сотрудничеству дилеров!
-        </div>
-        <div class="footer-contacts__address">
-          <p>ул. Большая Конюшенная, д. 19/8</p>
-          <p>Санкт-Петербург</p>
+      <div class="footer-contacts__aligner">
+        <div class="footer-contacts__wrapper">
+          <div class="footer-contacts__title">
+            Приглашаем к сотрудничеству дилеров!
+          </div>
+          <div class="footer-contacts__address">
+            <p>ул. Большая Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map-wrapper">

@@ -1,5 +1,40 @@
 .liveview {
   background-color: $section-grey;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+    border-top: 1px $basic-light-grey-2 solid;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-left-right(0, 0);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 160px, #eaeaea 160px, #eaeaea 100%);
+    border-top: none;
+  }
+}
+
+.liveview__block-aligner {
+  @media (min-width: $desktop-width) {
+    @include padding-left-right(110px, 110px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 134px;
+    max-width: 1440px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.liveview__achievements-section {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .liveview__achievements {
@@ -7,6 +42,25 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   padding-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 55px;
+    grid-template-columns: 162px 162px;
+    column-gap: 42px;
+  }
+}
+
+
+.liveview__cats-wrapper--fat img {
+  width: 311px;
+
+  @media (min-width: $tablet-width) {
+    width: 580px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 677px;
+  }
 }
 
 .liveview__cats-wrapper img {
@@ -14,12 +68,32 @@
   margin: auto;
 }
 
-.liveview__description {
+.liveview__section {
+  @include padding-left-right(20px, 20px);
   padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(30px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
-.liveview__description p {
+.liveview__description {
   @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(16px, 24px);
+    padding-top: 48px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 112px;
+  }
 }
 
 .liveview__fieldset span {
@@ -28,6 +102,10 @@
   display: block;
   text-align: center;
   padding: 5px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(30px, 37px);
+  }
 }
 
 .liveview__fieldset {
@@ -35,7 +113,11 @@
   box-sizing: border-box;
   border: solid $special-grey 1px;
   border-radius: 3px;
-  height: 56px;
+  min-height: 56px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 162px;
+  }
 }
 
 .liveview__fieldset legend {
@@ -47,28 +129,73 @@
   padding: 0 15px;
   background: $section-grey;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(14px, 14px);
+    background-color: $basic-white;
+    min-width: 140px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-size(14px, 14px);
+    background: $section-grey;
+  }
+}
+
+.liveview__fieldset:first-child legend {
+  @media (min-width: $tablet-width) {
+    min-width: 115px;
+  }
 }
 
 .liveview__subtitle {
   display: grid;
   grid-template-columns: 55% 45%;
   column-gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 70px;
+    padding-bottom: 95px;
+  }
 }
 
 .liveview__subtitle p {
   @include font(14px, 20px, $basic-black);
   @include font-uppercase;
   text-align: right;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 20px);
+    padding: 0;
+    margin: 0;
+  }
+
+  &:last-child {
+    @media (max-width: $mobile-width-only) {
+      text-align: left;
+    }
+  }
 }
 
-.liveview__subtitle p:last-child {
-  text-align: left;
-}
 
 .liveview__compare {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 57px;
+  }
 }
 
 .liveview__compare p {
@@ -78,22 +205,64 @@
 }
 
 .liveview__line {
-  @include size(84px, 14px);
-  background-color: $basic-white;
+  @media (max-width: $mobile-width-only) {
+    @include size(84px, 14px);
+    background-color: $basic-white;
+    border: 1px solid $special-grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+    margin: 0 2px 0 2px;
+  }
+
+  @include size(428px, 6px);
+  background-color: $special-grey;
   border: 1px solid $special-grey;
   box-sizing: border-box;
   border-radius: 6px;
   position: relative;
-  margin: 0 2px 0 2px;
+}
 
-  &::before {
+.liveview__drag-slider {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, $basic-white 0%, $basic-white 15%, $section-grey 15%, $section-grey 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: none;
+  }
+}
+
+.liveview__drag {
+  @media (max-width: $mobile-width-only) {
     @include size(35px, 6px);
-    content: "";
     background-color: $basic-green;
     box-sizing: border-box;
     border-radius: 6px;
     position: absolute;
     top: 3px;
     left: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include size(34px, 34px);
+    filter: drop-shadow(0 1px 3px $basic-shadow);
+    border-radius: 50%;
+    background-color: $basic-white;
+    box-sizing: border-box;
+    position: absolute;
+    top: -15px;
+    left: 180px;
+
+    &::before {
+      @include size(13px, 13px);
+      content: "";
+      background-color: $basic-green;
+      box-sizing: border-box;
+      border-radius: 50%;
+      position: absolute;
+      left: 11px;
+      top: 11px;
+    }
   }
 }
