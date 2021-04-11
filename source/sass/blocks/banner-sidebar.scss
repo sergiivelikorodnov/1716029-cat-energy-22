@@ -12,10 +12,33 @@
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/banner-image-2.jpg");
+    flex-direction: row;
+    min-height: 200px;
+    padding-top: 0;
+  }
+
   p {
     @include font(16px, 20px, $basic-white, 400, $secondary-font-family);
     text-align: center;
     padding: 35px 60px 16px 43px;
     position: relative;
+
+    @media (min-width: $tablet-width) {
+      @include font-size(16px, 20px);
+      padding: 0;
+      width: 165px;
+      text-align: left;
+      position: absolute;
+      right: 124px;
+    }
+  }
+
+  img {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      left: 80px;
+    }
   }
 }

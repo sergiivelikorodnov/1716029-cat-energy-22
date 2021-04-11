@@ -50,7 +50,7 @@
   </header>
 
   <main class="page-main">
-    <div class="page-main__title wrapper">
+    <div class="page-main__title wrapper wrapper--subpages">
       <h1 class="title">Подбор программы</h1>
       <p>
         Заполните анкету, и мы подберем программу питания для вашего кота
@@ -59,7 +59,6 @@
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
       <div class="form__specifications">
-
         <fieldset class="form__fieldset form__feature">
           <div class="form__fieldset-wrap">
             <div class="form__fieldset-container">
@@ -103,7 +102,7 @@
         <h3 class="form__fieldset-title">
           <span>Контактные данные (владельца кота)</span>
         </h3>
-        <div class="form__fieldset-wrap">
+        <div class="form__fieldset-wrap form__contacts--option">
           <div class="form__fieldset-container form__fieldset-container--mail">
             <label class="form__label" for="form-mail">E-mail:<sup>*</sup></label>
             <input class="form__input" id="form-mail" type="email" name="form-mail" placeholder="kuklachev@gmail.com"
@@ -131,7 +130,7 @@
         <h3 class="form__fieldset-title">
           <span>Дополнительно</span>
         </h3>
-        <div class="form__fieldset-wrap">
+        <div class="form__fieldset-wrap form__fieldset-checkboxes">
           <div class="form__fieldset-container">
             <input class="visually-hidden form__options-input form__options-input--checkbox" type="checkbox"
               name="sugarfree" id="filter-sugarfree" checked>
@@ -153,9 +152,11 @@
             <label class="form__options-label" for="filter-vitamins">Витамины</label>
           </div>
         </div>
+        <div class="form__button-area">
+          <button class="button form__button wrapper" type="submit">Отправить заявку</button>
+          <p class="form__description"><sup>*</sup> — Обязательные поля</p>
+        </div>
       </fieldset>
-      <button class="button form__button wrapper" type="submit">Отправить заявку</button>
-      <p class="form__description"><sup>*</sup> — Обязательные поля</p>
     </form>
   </main>
 
@@ -164,13 +165,15 @@
       Адрес представительства
     </h2>
     <div class="footer-contacts">
-      <div class="footer-contacts__wrapper footer-contacts__wrapper--grey">
-        <div class="footer-contacts__title">
-          Приглашаем к сотрудничеству дилеров!
-        </div>
-        <div class="footer-contacts__address">
-          <p>ул. Большая Конюшенная, д. 19/8</p>
-          <p>Санкт-Петербург</p>
+      <div class="footer-contacts__aligner">
+        <div class="footer-contacts__wrapper footer-contacts__wrapper--grey">
+          <div class="footer-contacts__title">
+            Приглашаем к сотрудничеству дилеров!
+          </div>
+          <div class="footer-contacts__address">
+            <p>ул. Большая Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </div>
         </div>
       </div>
       <div class="page-footer__map-wrapper">
