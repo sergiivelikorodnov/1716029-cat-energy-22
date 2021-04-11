@@ -12,20 +12,26 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     background-image: url("../img/banner-image-2.jpg");
     flex-direction: row;
     min-height: 200px;
     padding-top: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/banner-image-3.jpg");
+    min-height: 289px;
+    margin-top: 0;
+  }
+
   p {
     @include font(16px, 20px, $basic-white, 400, $secondary-font-family);
     text-align: center;
-    padding: 35px 60px 16px 43px;
+    padding: 35px 38px 16px 38px;
     position: relative;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
       @include font-size(16px, 20px);
       padding: 0;
       width: 165px;
@@ -39,6 +45,10 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       left: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 55px;
     }
   }
 }
