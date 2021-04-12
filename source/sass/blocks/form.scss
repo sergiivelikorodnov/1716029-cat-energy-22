@@ -1,24 +1,58 @@
 .form__description {
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
 .form__button {
   width: 280px;
   border: none;
+  margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__fieldset-wrap {
   padding-right: 20px;
   padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(70px, 65px);
+  }
 }
 
 .form__feature {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+
+    .form__fieldset-wrap {
+      padding-right: 0;
+    }
+  }
 }
 
 .form__contacts {
   padding-top: 25px;
+
+  &--option {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+.form__specifications {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
 }
 
 .form__options {
@@ -42,10 +76,20 @@
   overflow: hidden;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(0, 0);
+  }
+
   span {
     display: inline-block;
     position: relative;
     max-width: 181px;
+
+    @media (min-width: $tablet-width) {
+      @include font-size(36px, 36px);
+      display: inline;
+      padding-left: 65px;
+    }
   }
 }
 
@@ -74,11 +118,15 @@
 .form__fieldset-container {
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
   position: relative;
+  align-items: baseline;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
   }
 }
 
@@ -152,6 +200,26 @@
   border-top: 1px $basic-light-grey solid;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding-left: 70px;
+    padding-right: 65px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    padding-left: 0;
+  }
+
+  .form__fieldset-wrap {
+    @media (min-width: $tablet-width) {
+      border: 1px $basic-light-grey solid;
+      padding: 25px;
+    }
+  }
 }
 
 .form__textarea {
@@ -160,4 +228,27 @@
   padding: 13px;
   min-height: 150px;
   resize: none;
+}
+
+.form__fieldset-checkboxes {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    grid-row-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.form__button-area {
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(70px, 65px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    grid-row-gap: 20px;
+  }
 }
