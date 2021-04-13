@@ -33,6 +33,18 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+
+  @media (min-resolution: 2dppx) {
+    max-width: 100%;
+    height: 362px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url("../img/google-map@2x.jpg");
+    background-color: $background-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .page-footer__marker {

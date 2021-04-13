@@ -42,8 +42,10 @@
   padding-top: 25px;
 
   &--option {
-    display: flex;
-    gap: 80px;
+    @media (min-width: $desktop-width) {
+      display: flex;
+      gap: 80px;
+    }
   }
 }
 
@@ -101,6 +103,28 @@
   width: 100%;
   border: 1px solid $basic-light-grey;
   position: relative;
+
+  &::placeholder {
+    color: $special-dark-grey;
+  }
+
+  &:focus {
+    border-color: $special-dark-grey;
+
+    ~.form__fieldset-container--icon-phone path {
+      fill: $basic-green;
+    }
+
+    ~.form__fieldset-container--icon-mail {
+      path {
+        stroke: $basic-green;
+      }
+
+      line {
+        stroke: $basic-green;
+      }
+    }
+  }
 }
 
 
@@ -109,10 +133,6 @@
   @include font-uppercase;
   padding-right: 13px;
   flex-shrink: 0;
-}
-
-.form__input::placeholder {
-  color: $special-dark-grey;
 }
 
 .form__fieldset-container {
@@ -130,16 +150,14 @@
   }
 }
 
-.form__fieldset-container--mail input {
-  background-image: url("../img/icon-email.svg");
-  background-repeat: no-repeat;
-  background-position: right 15px top 15px;
-}
+.form__fieldset-container--icon {
+  position: relative;
 
-.form__fieldset-container--phone input {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: right 15px top 15px;
+  svg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
 }
 
 .form__options-label {
