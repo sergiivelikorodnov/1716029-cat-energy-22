@@ -33,10 +33,12 @@
 
   @media (min-width: $tablet-width) {
     border-top: none;
-    margin-right: 35px;
+    margin-left: 35px;
+    border-bottom: 2px transparent solid;
 
     &--active {
-      box-shadow: 0 -2px 0 $basic-green inset;
+      border-bottom: 2px $basic-green solid;
+      /* box-shadow: 0 -2px 0 $basic-green inset; */
 
       &-white {
         a {
@@ -46,7 +48,8 @@
         }
 
         @media (min-width: $desktop-width) {
-          box-shadow: 0 -2px 0 $basic-white inset;
+          border-bottom: 2px $basic-white solid;
+          /* box-shadow: 0 -2px 0 $basic-white inset; */
         }
       }
     }
