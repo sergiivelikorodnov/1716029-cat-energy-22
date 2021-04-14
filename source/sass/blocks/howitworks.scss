@@ -18,7 +18,7 @@
     counter-reset: section;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 137px;
-    column-gap: 100px;
+    column-gap: 80px;
     padding-top: 70px;
     padding-bottom: 55px;
   }
@@ -70,7 +70,11 @@
 
   @media (min-width: $tablet-width) {
     @include font-size(16px, 24px);
-    padding-right: 40px;
+    margin-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
