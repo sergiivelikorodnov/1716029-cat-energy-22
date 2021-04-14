@@ -24,9 +24,13 @@
   <header class="page-header">
     <div class="page-header__top">
       <a class="page-header__logo">
-        <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
+          <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+        </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню"></button>
         <ul class="main-nav__list site-list list-reset">
           <li class="site-list__item">
@@ -392,7 +396,22 @@
       </a>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

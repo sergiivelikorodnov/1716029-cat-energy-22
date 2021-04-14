@@ -22,24 +22,28 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__top">
+    <div class="page-header__top page-header__top--absolute">
       <a class="page-header__logo">
-        <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
+          <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+        </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню"></button>
         <ul class="main-nav__list site-list list-reset">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item site-list__item--active site-list__item--active-white">
             <a>
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--white">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--white">
             <a href="form.html">
               Подбор программы
             </a>
@@ -55,12 +59,17 @@
           <p class="page-header__subtitle">Занялся собой? Займись котом!</p>
           <a class="page-header__button button" href="#">Подобрать программу</a>
           <div class="page-header__image">
-            <img class="page-header__small-image" src="img/bottle-small.png" alt="Кэт энерджи ПРО" width="280"
-              height="270">
-            <img class="page-header__big-image" src="img/bottle-big.png" alt="Кэт энерджи ПРО большая" width="709"
+
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/bottle-big.png 1x, img/bottle-big@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/bottle-medium.jpg 1x, img/bottle-medium@2x.jpg 2x">
+              <img class="page-header__small-image" src="img/bottle-small.png" srcset="img/bottle-small@2x.png 2x"
+                alt="Кэт энерджи ПРО" width="280" height="270">
+            </picture>
+            <!--  <img class="page-header__big-image" src="img/bottle-big.png" alt="Кэт энерджи ПРО большая" width="709"
               height="609">
             <img class="page-header__medium-image" src="img/bottle-medium.png" alt="Кэт энерджи ПРО средняя" width="552"
-              height="499">
+              height="499"> -->
           </div>
         </div>
       </div>
@@ -241,6 +250,22 @@
     </div>
   </footer>
 
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
 </body>
 
