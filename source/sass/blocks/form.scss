@@ -121,7 +121,7 @@
 
     ~.form__fieldset-container--icon-mail {
       path {
-        fill: $basic-green;
+        stroke: $basic-green;
       }
 
       line {
@@ -129,10 +129,6 @@
       }
     }
   }
-}
-
-.form__fieldset-container--icon-phone {
-  fill: $basic-green;
 }
 
 .form__label {
