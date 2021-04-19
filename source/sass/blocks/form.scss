@@ -1,3 +1,9 @@
+.form {
+  overflow: hidden;
+  padding-top: 55px;
+  padding-bottom: 80px;
+}
+
 .form__description {
   text-align: center;
 
@@ -12,7 +18,9 @@
   margin-top: 20px;
 
   @media (min-width: $tablet-width) {
+    @include font-size(20px, 0);
     width: 100%;
+    margin-top: 8px;
   }
 }
 
@@ -23,14 +31,18 @@
   @media (min-width: $tablet-width) {
     @include padding-left-right(70px, 65px);
   }
+
+  @media (min-width: $tablet-width) {
+    @include padding-left-right(0, 0);
+  }
 }
 
 .form__feature {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  /*   padding-top: 18px;
+  padding-bottom: 25px; */
 
   @media (min-width: $desktop-width) {
-    flex-grow: 1;
+    width: 100%;
 
     .form__fieldset-wrap {
       padding-right: 0;
@@ -43,17 +55,26 @@
 
   &--option {
     @media (min-width: $desktop-width) {
-      display: flex;
-      gap: 80px;
+      display: grid;
+      padding-top: 20px;
+      grid-template-columns: 570px 1fr;
+      grid-gap: 75px;
     }
   }
 }
 
 .form__specifications {
   @media (min-width: $desktop-width) {
-    display: flex;
+    padding: 0;
+    display: grid;
     align-items: center;
     gap: 80px;
+    max-width: 1220px;
+    margin: 0 auto;
+    grid-template-columns: 569px 568px;
+    justify-content: space-around;
+    row-gap: 20px;
+    padding-bottom: 10px;
   }
 }
 
@@ -62,10 +83,10 @@
 }
 
 .form__fieldset {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
+  padding: 0;
   border: 0;
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
 .form__fieldset-title {
@@ -75,11 +96,12 @@
   padding-bottom: 35px;
   padding-right: 20px;
   padding-left: 20px;
-  overflow: hidden;
   position: relative;
 
   @media (min-width: $tablet-width) {
     @include padding-left-right(0, 0);
+    padding-bottom: 55px;
+    padding-top: 58px;
   }
 
   span {
@@ -105,13 +127,15 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 25px 50px 25px 20px;
+    @include font-size(20px, 29px);
+    padding: 25px 52px 25px 20px;
   }
 
   &::placeholder {
     color: $special-dark-grey;
   }
 
+  &:hover,
   &:focus {
     border-color: $special-dark-grey;
 
@@ -136,6 +160,11 @@
   @include font-uppercase;
   padding-right: 13px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 29px);
+    padding-right: 18px;
+  }
 }
 
 .form__fieldset-container {
@@ -144,8 +173,10 @@
   position: relative;
   align-items: baseline;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+  &--margin {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &:last-child {
@@ -164,8 +195,10 @@
     position: absolute;
     top: 15px;
     right: 15px;
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    svg {
       top: 19px;
       right: 19px;
     }
@@ -180,14 +213,26 @@
   padding-top: 5px;
 
   @media (min-width: $tablet-width) {
+    @include font-size(20px, 29px);
     padding-left: 59px;
-    padding-bottom: 8px;
-    padding-top: 10px;
+    /* padding-bottom: 8px; */
+    /* padding-top: 10px; */
   }
 }
 
 .form__options-input--radio {
   &:hover {
+    +label::before {
+      @include size(30px, 30px);
+      border: 1px $grey-hover solid;
+
+      @media (min-width: $tablet-width) {
+        @include size(40px, 40px);
+      }
+    }
+  }
+
+  &:focus {
     +label::before {
       @include size(30px, 30px);
       border: 1px $grey-hover solid;
@@ -220,6 +265,12 @@
 
   &:checked {
     &:hover {
+      +label::before {
+        border: 1px $grey-hover solid;
+      }
+    }
+
+    &:focus {
       +label::before {
         border: 1px $grey-hover solid;
       }
@@ -266,6 +317,17 @@
     }
   }
 
+  &:focus {
+    +label::before {
+      @include size(30px, 30px);
+      border: 1px $grey-hover solid;
+
+      @media (min-width: $tablet-width) {
+        @include size(40px, 40px);
+      }
+    }
+  }
+
   +label::before {
     @include size(30px, 30px);
     content: "";
@@ -287,6 +349,12 @@
 
   &:checked {
     &:hover {
+      +label::before {
+        border: 1px $grey-hover solid;
+      }
+    }
+
+    &:focus {
       +label::before {
         border: 1px $grey-hover solid;
       }
@@ -327,26 +395,29 @@
   margin: 0;
   border-bottom: 1px $basic-light-grey solid;
   border-top: 1px $basic-light-grey solid;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 0;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
 
   @media (min-width: $tablet-width) {
     border: none;
     padding-left: 70px;
     padding-right: 65px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    /*     padding-top: 40px; */
+    /* padding-bottom: 30px; */
   }
 
   @media (min-width: $desktop-width) {
     flex-grow: 1;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .form__fieldset-wrap {
     @media (min-width: $tablet-width) {
       border: 1px $basic-light-grey solid;
       padding: 25px;
+      padding-bottom: 18px;
     }
   }
 }
@@ -355,8 +426,9 @@
   width: 100%;
   border: 1px solid $basic-light-grey;
   padding: 13px;
-  min-height: 150px;
+  min-height: 180px;
   resize: none;
+  margin-top: 20px;
 }
 
 .form__fieldset-checkboxes {
@@ -369,15 +441,21 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 40px;
+    grid-gap: 77px;
   }
 }
 
 .form__button-area {
   @media (min-width: $tablet-width) {
-    @include padding-left-right(70px, 65px);
+    /* @include padding-left-right(70px, 65px); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     grid-row-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 83px;
   }
 }

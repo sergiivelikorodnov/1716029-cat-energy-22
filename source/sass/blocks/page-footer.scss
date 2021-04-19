@@ -10,7 +10,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 37px;
     padding-bottom: 30px;
   }
 }
@@ -50,8 +50,8 @@
 .page-footer__marker {
   @include size(57px, 53px);
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 33%;
+  left: 61%;
   z-index: 1;
   background-image: url("../img/google-map-pin.svg");
   background-repeat: no-repeat;

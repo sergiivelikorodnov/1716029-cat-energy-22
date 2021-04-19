@@ -24,6 +24,9 @@
 }
 
 .footer-social__link {
+  height: 22px;
+  display: block;
+
   &:hover .footer-social__svg-icon path {
     fill: $basic-green;
   }
