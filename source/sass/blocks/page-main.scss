@@ -1,13 +1,14 @@
 .page-main__title p {
   @include font-uppercase;
   @include font(14px, 18px, $basic-black);
-  padding-top: 28px;
+  padding-top: 32px;
   padding-bottom: 10px;
-  width: 350px;
+  width: 270px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 30px, $basic-black);
     padding-top: 58px;
+    width: 350px;
   }
 }

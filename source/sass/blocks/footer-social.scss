@@ -1,10 +1,11 @@
 .footer-social {
-  padding-top: 25px;
+  padding-top: 14px;
   position: relative;
   border-bottom: 1px $grey-line solid;
   padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 25px;
     border-bottom: none;
   }
 }
