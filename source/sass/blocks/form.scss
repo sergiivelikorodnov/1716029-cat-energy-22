@@ -133,26 +133,33 @@
 
   &::placeholder {
     color: $special-dark-grey;
+    outline: none;
+  }
+
+  ~.form__fieldset-container--icon-phone {
+    fill: #ff0000;
+  }
+
+  ~.form__fieldset-container--icon-mail {
+    stroke: #ff0000;
   }
 
   &:hover,
   &:focus {
     border-color: $special-dark-grey;
 
-    ~.form__fieldset-container--icon-phone path {
+    ~.form__fieldset-container--icon-phone {
       fill: $basic-green;
     }
 
     ~.form__fieldset-container--icon-mail {
-      path {
-        stroke: $basic-green;
-      }
-
-      line {
-        stroke: $basic-green;
-      }
+      stroke: $basic-green;
     }
   }
+}
+
+.form__fieldset-container--icon-phone {
+  fill: #ff0000;
 }
 
 .form__label {
