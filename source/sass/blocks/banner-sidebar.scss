@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 40px;
   margin-bottom: 35px;
   flex-direction: column;
   align-items: center;
@@ -24,6 +24,8 @@
     flex-direction: row;
     min-height: 200px;
     padding-top: 0;
+    margin-top: 66px;
+    margin-bottom: 75px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/banner-image-2@2x.jpg");
@@ -43,27 +45,36 @@
   p {
     @include font(16px, 20px, $basic-white, 400, $secondary-font-family);
     text-align: center;
-    padding: 35px 38px 16px 38px;
+    padding: 35px 38px 25px 38px;
     position: relative;
+    max-width: 240px;
 
     @media (min-width: $tablet-width) and (max-width: 1439px) {
       @include font-size(16px, 20px);
       padding: 0;
-      width: 165px;
+      max-width: 165px;
       text-align: left;
       position: absolute;
-      right: 124px;
+      right: 120px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 130px 38px 25px 38px;
     }
   }
 
   img {
+    padding-top: 16px;
+
     @media (min-width: $tablet-width) {
       position: absolute;
       left: 80px;
+      padding-top: 0;
     }
 
     @media (min-width: $desktop-width) {
-      top: 55px;
+      top: 56px;
+      left: 35%;
     }
   }
 }

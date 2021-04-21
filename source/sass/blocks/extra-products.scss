@@ -4,7 +4,7 @@
   margin: 0;
   border-top: 1px $basic-light-grey solid;
   padding-top: 25px;
-  padding-bottom: 35px;
+  padding-bottom: 33px;
   padding-right: 20px;
   padding-left: 20px;
   overflow: hidden;
@@ -13,12 +13,17 @@
   @media (min-width: $tablet-width) {
     @include padding-left-right(0, 0);
     border-top: none;
+    padding-left: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 125px;
   }
 
   span {
     display: inline-block;
     position: relative;
-    max-width: 181px;
+    max-width: 226px;
 
     @media (min-width: $tablet-width) {
       @include font-size(36px, 36px);
@@ -28,12 +33,23 @@
   }
 }
 
+.extra-products__list {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    border: 1px $basic-light-grey solid;
+    margin-top: 49px;
+  }
+}
+
 .extra-products__title {
   @include font(16px, 16px, $special-dark-grey-2);
   @include font-uppercase;
   margin: 0;
   padding-bottom: 8px;
-  padding-top: 25px;
+  padding-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 20px);
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
@@ -43,13 +59,23 @@
 .extra-products__description {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .extra-products__item {
   border-top: 1px $special-grey solid;
 
   &:first-child {
-    border-top: none;
+    @media (min-width: $tablet-width) {
+      border-top: none;
+    }
 
     @media (min-width: $desktop-width) {
       border-top: 1px $special-grey solid;
@@ -61,11 +87,22 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
     display: grid;
     justify-content: space-between;
     align-items: first baseline;
     grid-template-columns: 285px 1fr 244px;
     gap: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
   }
 }
 
@@ -74,10 +111,29 @@
   margin: 0;
   padding-bottom: 10px;
   padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(16px, 20px);
+    padding-left: 50px;
+    padding-top: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .extra-products__button {
-  margin-bottom: 25px;
+  margin-bottom: 17px;
+  margin-top: 5px;
+  padding: 8px 26px 8px 26px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 27px;
+    margin-top: 14px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 15px;
@@ -91,7 +147,7 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 80px;
-    padding-top: 40px;
+    padding-top: 46px;
     padding-bottom: 50px;
   }
 }

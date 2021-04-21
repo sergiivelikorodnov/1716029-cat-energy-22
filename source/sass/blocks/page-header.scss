@@ -32,6 +32,13 @@
   }
 }
 
+.page-header__wrap {
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .page-header__subpages {
   background-image: none;
   min-height: auto;
@@ -50,7 +57,7 @@
 
   background: linear-gradient(to top, $background-overlay, $background-overlay), url("../img/promo-small.jpg");
   background-color: $basic-green;
-  background-position: center;
+  background-position: 64%;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -63,7 +70,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 36px;
-    padding-left: 70px;
+    padding-left: 67px;
     background: none;
   }
 
@@ -77,10 +84,12 @@
 
 .page-header__top {
   position: relative;
+  border-bottom: 1px $grey-line solid;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    border-bottom: none;
   }
 }
 
@@ -97,7 +106,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 198px;
+    width: 202px;
   }
 }
 
@@ -130,6 +139,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    @include font-size(20px, 20px);
     text-align: left;
     color: $basic-black;
     padding-left: 0;
@@ -150,11 +160,12 @@
     bottom: 0;
     z-index: -1;
     margin-top: 0;
+    left: 66px;
   }
 
   @media (min-width: $desktop-width) {
     bottom: 8%;
-    left: 39%;
+    left: 38.7%;
     z-index: 1;
     margin-top: 0;
   }
@@ -182,7 +193,7 @@
     @include font-size(20px, 20px);
     width: 244px;
     padding: 17px 0;
-    margin-left: 70px;
+    margin-left: 65px;
   }
 
   @media (min-width: $desktop-width) {

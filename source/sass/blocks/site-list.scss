@@ -17,7 +17,7 @@
 
   @media (min-width: $tablet-width) {
     @include font(18px, 24px, $basic-black, 400);
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,6 +32,7 @@
   &--white a {
     @media (min-width: $desktop-width) {
       color: $basic-white;
+      padding-top: 20px;
     }
   }
 
@@ -57,6 +58,10 @@
         }
       }
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 33px;
   }
 }
 

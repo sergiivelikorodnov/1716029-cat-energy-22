@@ -1,26 +1,34 @@
+.howitworks {
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
+}
+
 .howitworks__list {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 100px;
   padding-top: 37px;
-  padding-bottom: 46px;
+  padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     counter-reset: section;
     grid-template-columns: 1fr 1fr;
     row-gap: 75px;
-    column-gap: 100px;
+    column-gap: 60px;
     padding-top: 70px;
-    padding-bottom: 115px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
     counter-reset: section;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 137px;
-    column-gap: 80px;
-    padding-top: 70px;
-    padding-bottom: 55px;
+    column-gap: 79px;
+    padding-top: 75px;
+    padding-bottom: 20px;
   }
 }
 
@@ -28,13 +36,17 @@
   padding-left: 80px;
   position: relative;
   min-height: 74px;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
-    padding-top: 90px;
-    padding-bottom: 80px;
+    padding-top: 113px;
+    padding-bottom: 58px;
     min-height: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 111px;
   }
 }
 
@@ -45,22 +57,43 @@
   position: absolute;
   left: 0;
   top: 0;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    @include size(80px, 80px);
+  }
 }
 
 .howitworks__icon1::before {
   background-image: url("../img/howitworks-icon1.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/howitworks-icon1-big.svg");
+  }
 }
 
 .howitworks__icon2::before {
   background-image: url("../img/howitworks-icon2.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/howitworks-icon2-big.svg");
+  }
 }
 
 .howitworks__icon3::before {
   background-image: url("../img/howitworks-icon3.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/howitworks-icon3-big.svg");
+  }
 }
 
 .howitworks__icon4::before {
   background-image: url("../img/howitworks-icon4.svg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/howitworks-icon4-big.svg");
+  }
 }
 
 .howitworks__description {
@@ -70,7 +103,7 @@
 
   @media (min-width: $tablet-width) {
     @include font-size(16px, 24px);
-    margin-right: 40px;
+    margin-right: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -85,6 +118,10 @@
     left: 118px;
     top: -38px;
     z-index: -1;
+
+    @media (min-width: $desktop-width) {
+      left: 118px;
+    }
 
     &::before {
       counter-increment: section;

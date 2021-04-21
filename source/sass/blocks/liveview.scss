@@ -8,8 +8,9 @@
 
   @media (min-width: $desktop-width) {
     @include padding-left-right(0, 0);
-    background: linear-gradient(180deg, #ffffff 0%, #ffffff 160px, #eaeaea 160px, #eaeaea 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 180px, #eaeaea 180px, #eaeaea 100%);
     border-top: none;
+    padding-bottom: 10px;
   }
 }
 
@@ -17,8 +18,8 @@
   @media (min-width: $desktop-width) {
     @include padding-left-right(110px, 110px);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 134px;
+    grid-template-columns: 432px 690px;
+    column-gap: 138px;
     max-width: 1440px;
     position: relative;
     left: 50%;
@@ -43,8 +44,13 @@
   column-gap: 30px;
   padding-top: 10px;
 
+  @media (min-width: $tablet-width) {
+    column-gap: 35px;
+    padding-bottom: 20px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-bottom: 55px;
+    padding-bottom: 42px;
     grid-template-columns: 162px 162px;
     column-gap: 42px;
   }
@@ -55,11 +61,11 @@
   width: 311px;
 
   @media (min-width: $tablet-width) {
-    width: 580px;
+    width: 708px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 677px;
+    width: 690px;
   }
 }
 
@@ -69,14 +75,16 @@
 }
 
 .liveview__section {
-  @include padding-left-right(20px, 20px);
+  @include padding-left-right(20px, 17px);
   padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     @include padding-left-right(30px, 30px);
+    padding-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
+    @include padding-left-right(0, 0);
     padding-top: 0;
   }
 }
@@ -92,7 +100,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 112px;
+    padding-top: 132px;
+    padding-bottom: 43px;
   }
 }
 
@@ -101,7 +110,7 @@
   @include font-uppercase;
   display: block;
   text-align: center;
-  padding: 5px;
+  padding: 7px;
 
   @media (min-width: $tablet-width) {
     @include font-size(30px, 37px);
@@ -129,6 +138,7 @@
   padding: 0 15px;
   background: $section-grey;
   text-align: center;
+  padding-top: 10px;
 
   @media (min-width: $tablet-width) {
     @include font-size(14px, 14px);
@@ -152,20 +162,21 @@
 
 .liveview__subtitle {
   display: grid;
-  grid-template-columns: 55% 45%;
-  column-gap: 10px;
+  grid-template-columns: 59% 41%;
+  column-gap: 5px;
+  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 70px;
-    padding-bottom: 95px;
+    padding-bottom: 55px;
   }
 }
 
@@ -178,11 +189,16 @@
     @include font-size(20px, 20px);
     padding: 0;
     margin: 0;
+    padding-bottom: 10px;
   }
 
   &:last-child {
     @media (max-width: $mobile-width-only) {
       text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 60px;
     }
   }
 }
@@ -192,16 +208,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 57px;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: -6px;
+    left: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+    bottom: 7px;
+    left: 53%;
   }
 }
 
 .liveview__compare p {
   @include font(16px, 20px, $basic-black);
   @include font-uppercase;
-  padding: 0 10px 0 10px;
+  padding: 0 14px 0 17px;
+
+  @media (min-width: $tablet-width) {
+    @include font-size(20px, 29px);
+    padding: 0 24px 0 21px;
+  }
 }
 
 .liveview__line {
@@ -224,12 +257,22 @@
 }
 
 .liveview__drag-slider {
+  padding-top: 20px;
+  position: relative;
+
   @media (min-width: $tablet-width) {
-    background: linear-gradient(180deg, $basic-white 0%, $basic-white 15%, $section-grey 15%, $section-grey 100%);
+    background: linear-gradient(180deg, $basic-white 0%, $basic-white 36%, $section-grey 36%, $section-grey 100%);
+    padding-top: 47px;
+    padding-bottom: 33px;
   }
 
   @media (min-width: $desktop-width) {
     background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    bottom: -10px;
+    position: absolute;
+    left: 680px;
   }
 }
 
@@ -245,24 +288,24 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include size(34px, 34px);
+    @include size(32px, 32px);
     filter: drop-shadow(0 1px 3px $basic-shadow);
     border-radius: 50%;
     background-color: $basic-white;
     box-sizing: border-box;
     position: absolute;
     top: -15px;
-    left: 180px;
+    left: 199px;
 
     &::before {
-      @include size(13px, 13px);
+      @include size(8px, 8px);
       content: "";
       background-color: $basic-green;
       box-sizing: border-box;
       border-radius: 50%;
       position: absolute;
-      left: 11px;
-      top: 11px;
+      left: 13px;
+      top: 13px;
     }
   }
 }
