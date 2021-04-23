@@ -26,6 +26,8 @@
   cursor: pointer;
   top: 30px;
   right: 20px;
+  transition: all 0.35s ease-in-out;
+  z-index: 2;
 
   &::before {
     @include size(24px, 2px);
@@ -33,6 +35,7 @@
     content: "";
     display: block;
     background-color: $basic-black;
+    transition: all 0.35s ease-in-out;
   }
 
   &::after {
@@ -41,6 +44,23 @@
     content: "";
     display: block;
     background-color: $basic-black;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &.openned {
+    background-color: $basic-white;
+
+    &::before {
+      transform-origin: 12px -2px;
+      transform: rotate(45deg);
+      width: 27px;
+    }
+
+    &::after {
+      transform-origin: 10px 3px;
+      transform: rotate(-45deg);
+      width: 27px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -68,7 +88,7 @@
   }
 }
 
-.main-nav--opened .main-nav__toggle {
+/* .main-nav--opened .main-nav__toggle {
   background-color: $basic-white;
   border: none;
   cursor: pointer;
@@ -101,7 +121,7 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
+} */
 
 
 .main-nav--nojs .site-list {

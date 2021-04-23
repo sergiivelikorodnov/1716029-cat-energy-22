@@ -30,6 +30,7 @@ window.addEventListener('resize', function (event) {
 
 navToggle.addEventListener('click', function () {
   navMain.classList.toggle('main-nav--opened');
+  navToggle.classList.toggle('openned');
 
   if (openTrue) {
     topHeader.style.height = clientHeight + 65 + 'px';
