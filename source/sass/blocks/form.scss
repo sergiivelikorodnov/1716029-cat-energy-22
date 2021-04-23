@@ -211,6 +211,7 @@
   width: 100%;
   border: 1px solid $basic-light-grey;
   position: relative;
+  transition: all 0.35s ease-in-out;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 29px);
@@ -220,14 +221,6 @@
   &::placeholder {
     color: $special-dark-grey;
     outline: none;
-  }
-
-  ~.form__fieldset-container--icon-phone {
-    fill: #ff0000;
-  }
-
-  ~.form__fieldset-container--icon-mail {
-    stroke: #ff0000;
   }
 
   &:hover,
@@ -245,11 +238,13 @@
 }
 
 .form__fieldset-container--icon-phone {
-  fill: #ff0000;
+  transition: all 0.35s ease-in-out;
+  fill: $special-dark-grey-2;
 }
 
 .form__fieldset-container--icon-mail {
-  stroke: #ff0000;
+  transition: all 0.35s ease-in-out;
+  stroke: $special-dark-grey-2;
 }
 
 .form__label {
@@ -307,7 +302,7 @@
 
   @media (min-width: $tablet-width) {
     svg {
-      top: 19px;
+      top: 13px;
       right: 19px;
       padding-bottom: 10px;
       height: 35px;

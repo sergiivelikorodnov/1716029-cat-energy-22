@@ -6,6 +6,8 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 10px;
   }
 }
 
@@ -13,14 +15,15 @@
   @include font(24px, 37px, $basic-black);
   @include font-uppercase;
   text-align: left;
-  padding-left: 75px;
-  padding-top: 10px;
+  padding-left: 72px;
+  padding-top: 8px;
   padding-bottom: 14px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     @include font-size(36px, 36px);
     padding-left: 0;
+    padding-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,7 +50,7 @@
   @media (min-width: $desktop-width) {
     @include size(100px, 106px);
     /* @include background-size(100px, 106px); */
-    top: 100px;
+    top: 95px;
     left: 52px;
   }
 }
@@ -71,18 +74,19 @@
     @include align-vertical();
     background-size: cover;
     right: 28px;
+    top: 52%;
   }
 
   @media (min-width: $desktop-width) {
     /* @include background-size(134px, 100px); */
     @include size(134px, 100px);
-    top: 100px;
-    left: 35px;
+    top: 99px;
+    left: 33px;
   }
 }
 
 .catalog__article {
-  padding: 25px;
+  padding: 20px;
   position: relative;
   background-color: $basic-grey;
 
@@ -90,15 +94,22 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  /*   @media (min-width: $tablet-width) {
     padding: 53px;
-  }
+    padding-bottom: 58px;
+  } */
 
   @media (min-width: $tablet-width) {
     padding-left: 53px;
     padding-top: 61px;
-    padding-bottom: 64px;
+    padding-bottom: 57px;
     padding-right: 51px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 63px;
+    margin-bottom: 0;
   }
 }
 
@@ -118,13 +129,13 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
-    padding-top: 55px;
+    padding-top: 60px;
   }
 }
 
 .catalog__article--pro .catalog__article-description {
   @media (min-width: $tablet-width) {
-    padding-right: 258px;
+    padding-right: 263px;
   }
 
   @media (min-width: $desktop-width) {
@@ -138,12 +149,18 @@
   position: relative;
   display: inline-block;
   margin-top: 20px;
-  padding-right: 40px;
+  padding-right: 46px;
   transition: all 0.35s ease-in-out;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 29px);
     padding-right: 55px;
+    margin-top: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
+    padding-right: 60px;
   }
 
   &::after {

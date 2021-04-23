@@ -17,7 +17,7 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  @include size(24px, 3px);
+  @include size(24px, 2px);
   display: inline-block;
   position: absolute;
   background-color: $basic-black;
@@ -26,21 +26,41 @@
   cursor: pointer;
   top: 30px;
   right: 20px;
+  transition: all 0.35s ease-in-out;
+  z-index: 2;
 
   &::before {
-    @include size(24px, 3px);
+    @include size(24px, 2px);
     transform: translate(0, -9px);
     content: "";
     display: block;
     background-color: $basic-black;
+    transition: all 0.35s ease-in-out;
   }
 
   &::after {
-    @include size(24px, 3px);
+    @include size(24px, 2px);
     transform: translate(0, 6px);
     content: "";
     display: block;
     background-color: $basic-black;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &.openned {
+    background-color: $basic-white;
+
+    &::before {
+      transform-origin: 12px -2px;
+      transform: rotate(45deg);
+      width: 27px;
+    }
+
+    &::after {
+      transform-origin: 10px 3px;
+      transform: rotate(-45deg);
+      width: 27px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -50,11 +70,25 @@
 
 .main-nav--closed .site-list {
   @media (max-width: $mobile-width-only) {
-    display: none;
+    transition: all 0.75s ease-in-out;
+    position: relative;
+    top: -300px;
   }
 }
 
-.main-nav--opened .main-nav__toggle {
+.main-nav--closed .page-header__top {
+  transition: all 0.75s ease-in-out;
+  height: 70px;
+}
+
+.main-nav--opened .site-list {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    /* top: 0; */
+  }
+}
+
+/* .main-nav--opened .main-nav__toggle {
   background-color: $basic-white;
   border: none;
   cursor: pointer;
@@ -62,7 +96,7 @@
   height: 24px;
   position: absolute;
   top: 20px;
-  right: 23px;
+  right: 15px;
 
   &::before {
     transform-origin: 9px -6px;
@@ -71,7 +105,7 @@
     display: block;
     background-color: $basic-black;
     width: 27px;
-    height: 3px;
+    height: 2px;
   }
 
   &::after {
@@ -81,13 +115,13 @@
     display: block;
     background-color: $basic-black;
     width: 27px;
-    height: 3px;
+    height: 2px;
   }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
+} */
 
 
 .main-nav--nojs .site-list {

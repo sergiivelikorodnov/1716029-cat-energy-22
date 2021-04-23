@@ -1,50 +1,85 @@
 .footer-social {
-  padding-top: 14px;
+  padding-top: 20px;
   position: relative;
-  border-bottom: 1px $grey-line solid;
+  border-bottom: 1px #d9d9d9 solid;
   padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
+    padding-top: 0;
     border-bottom: none;
   }
 }
 
 .footer-social li {
   display: inline-block;
-  padding-right: 25px;
+  padding-right: 35px;
 
   &:last-child {
     padding-right: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+    padding-left: 24px;
+  }
 }
 
-.footer-social__svg-icon path,
-.footer-social__svg-icon2 path {
+.footer-social__svg-icon,
+.footer-social__svg-icon2 {
   transition: all 0.35s ease-in-out;
 }
 
 .footer-social__link {
   height: 22px;
   display: block;
+  fill: $special-grey-3;
 
-  &:hover .footer-social__svg-icon path {
+  &:hover .footer-social__svg-icon {
     fill: $basic-green;
   }
 
-  &:focus .footer-social__svg-icon path,
-  &:active .footer-social__svg-icon path {
+  &:focus .footer-social__svg-icon,
+  &:active .footer-social__svg-icon {
     fill: $basic-green;
     opacity: 0.3;
   }
 
-  &:hover .footer-social__svg-icon2 path {
+  &:hover .footer-social__svg-icon2 {
     stroke: $basic-green;
   }
 
-  &:focus .footer-social__svg-icon2 path,
-  &:active .footer-social__svg-icon2 path {
+  &:focus .footer-social__svg-icon2,
+  &:active .footer-social__svg-icon2 {
     stroke: $basic-green;
     opacity: 0.3;
   }
+}
+
+
+.footer-social__link--vk svg {
+  @media (min-width: $tablet-width) {
+    @include size(30px, 33px);
+  }
+}
+
+.footer-social__link--instagram svg {
+  @media (min-width: $tablet-width) {
+    @include size(23px, 33px);
+  }
+}
+
+.footer-social__link--facebook svg {
+  stroke: $special-grey-3;
+
+  @media (min-width: $tablet-width) {
+    @include size(28px, 33px);
+  }
+}
+
+
+.footer-social__svg-icon2 {
+  fill: $special-grey-2;
 }
