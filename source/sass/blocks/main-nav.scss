@@ -50,7 +50,21 @@
 
 .main-nav--closed .site-list {
   @media (max-width: $mobile-width-only) {
-    display: none;
+    transition: all 0.75s ease-in-out;
+    position: relative;
+    top: -300px;
+  }
+}
+
+.main-nav--closed .page-header__top {
+  transition: all 0.75s ease-in-out;
+  height: 70px;
+}
+
+.main-nav--opened .site-list {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    /* top: 0; */
   }
 }
 
@@ -62,7 +76,7 @@
   height: 24px;
   position: absolute;
   top: 20px;
-  right: 23px;
+  right: 15px;
 
   &::before {
     transform-origin: 9px -6px;
@@ -71,7 +85,7 @@
     display: block;
     background-color: $basic-black;
     width: 27px;
-    height: 3px;
+    height: 2px;
   }
 
   &::after {
@@ -81,7 +95,7 @@
     display: block;
     background-color: $basic-black;
     width: 27px;
-    height: 3px;
+    height: 2px;
   }
 
   @media (min-width: $tablet-width) {

@@ -85,11 +85,22 @@
 .page-header__top {
   position: relative;
   border-bottom: 1px $grey-line solid;
+  transition: all 0.75s ease-in-out;
+
+  @media (max-width: $mobile-width-only) {
+    height: 70px;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     border-bottom: none;
+  }
+
+  &--height {
+    @media (max-width: $mobile-width-only) {
+      height: 260px;
+    }
   }
 }
 
