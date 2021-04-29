@@ -155,23 +155,28 @@
         </div>
         <div class="liveview__drag-slider">
           <div class="liveview__cats">
-            <div class="liveview__cats-wrapper liveview__cats-wrapper--fat">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/cat-desktop.webp 1x, img/cat-desktop@2x.webp 2x"
+            <div class="liveview__cats-wrapper">
+              <picture class="liveview__cats-wrapper--fat">
+                <!-- <source media="(min-width: 1440px)" srcset="img/cat-desktop.webp 1x, img/cat-desktop@2x.webp 2x"
                   type="img/webp">
-                <source media="(min-width: 1440px)" srcset="img/cat-desktop.png 1x, img/cat-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/cat-tablet.webp 1x, img/cat-tablet@2x.webp 2x"
-                  type="img/webp">
-                <source media="(min-width: 768px)" srcset="img/cat-tablet.png 1x, img/cat-tablet@2x.png 2x">
-                <source srcset="img/img/cat-fat.webp 1x, img/img/cat-fat@2x.webp 2x" type="img/webp">
-                <img src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="Был Жирный кот" width="311" height="232">
+                <source media="(min-width: 1440px)" srcset="img/cat-desktop.png 1x, img/cat-desktop@2x.png 2x"> -->
+                <!-- <source media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x"
+                  type="img/webp"> -->
+                <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
+                <!--   <source srcset="img/img/cat-fat-small.webp 1x, img/img/cat-fat-small@2x.webp 2x" type="img/webp"> -->
+                <img src="img/cat-fat-small.png" srcset="img/cat-fat-small@2x.png 2x" alt="Был Жирный кот" width="311"
+                  height="232">
               </picture>
+              <figure class="liveview__cats-wrapper--skinny">
+                <div class="liveview__divisor" id="compare"></div>
+              </figure>
             </div>
           </div>
           <div class="liveview__compare">
             <p>Было</p>
             <div class="liveview__line">
-              <div class="liveview__drag"></div>
+              <input class="liveview__drag" type="range" min="0" max="98" value="0" id="slider" oninput="beforeAfter()"
+                onchange="beforeAfter()">
             </div>
             <p>Стало</p>
           </div>
