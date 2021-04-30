@@ -32,3 +32,8 @@ navToggle.addEventListener('click', function () {
   }
 }
 )
+
+function beforeAfter() {
+  document.querySelector('.liveview__divisor').style.width = document.querySelector('.liveview__drag').value + "%";
+  console.log(document.querySelector('.liveview__drag').value + "%");
+}
