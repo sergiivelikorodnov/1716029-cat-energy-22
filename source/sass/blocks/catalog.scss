@@ -39,6 +39,10 @@
   position: absolute;
   display: block;
 
+  @media (max-width: $mobile-width-only) {
+    left: 22px;
+  }
+
   @media (min-width: $tablet-width) {
     /* @include background-size(200px, 212px); */
     @include size(200px, 212px);
@@ -63,9 +67,10 @@
   background-repeat: no-repeat;
   position: absolute;
   display: block;
+  top: 24px;
 
   @media (max-width: $mobile-width-only) {
-    left: 15px;
+    left: 13px;
   }
 
   @media (min-width: $tablet-width) {
@@ -87,6 +92,7 @@
 
 .catalog__article {
   padding: 20px;
+  padding-bottom: 17px;
   position: relative;
   background-color: $basic-grey;
 
@@ -117,13 +123,14 @@
   @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
   position: relative;
   margin: 0;
-  padding-top: 13px;
+  padding-top: 17px;
   padding-bottom: 23px;
   border-bottom: 1px $grey-line solid;
 
   @media (min-width: $tablet-width) {
     @include font-size(16px, 24px);
     border-bottom: none;
+    padding-top: 13px;
     padding-right: 226px;
   }
 
@@ -148,7 +155,7 @@
   @include font-uppercase;
   position: relative;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 18px;
   padding-right: 46px;
   transition: all 0.35s ease-in-out;
 

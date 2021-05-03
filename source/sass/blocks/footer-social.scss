@@ -8,8 +8,16 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
+    padding-top: 10px;
     border-bottom: none;
+    align-items: baseline;
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: baseline;
+    padding-top: 18px;
+    padding-left: 6px;
   }
 }
 
@@ -75,7 +83,7 @@
   stroke: $special-grey-3;
 
   @media (min-width: $tablet-width) {
-    @include size(28px, 33px);
+    @include size(30px, 39px);
   }
 }
 

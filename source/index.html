@@ -15,13 +15,14 @@
 
   <!--================ Vendor CSS ================-->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="page-header">
     <div class="page-header__top page-header__wrap">
       <a class="page-header__logo">
-        <picture>
+        <picture class="page-header__logo-picture">
           <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
           <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
@@ -157,12 +158,9 @@
           <div class="liveview__cats">
             <div class="liveview__cats-wrapper">
               <picture class="liveview__cats-wrapper--fat">
-                <source media="(min-width: 1440px)" srcset="img/cat-desktop.webp 1x, img/cat-desktop@2x.webp 2x"
-                  type="img/webp">
-                <source media="(min-width: 1440px)" srcset="img/cat-desktop.png 1x, img/cat-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x" type="img/webp">
                 <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
-                <source srcset="img/img/cat-fat-small.webp 1x, img/img/cat-fat-small@2x.webp 2x" type="img/webp">
+                <source srcset="img/cat-fat-small.webp 1x, img/cat-fat-small@2x.webp 2x" type="img/webp">
                 <img src="img/cat-fat-small.png" srcset="img/cat-fat-small@2x.png 2x" alt="Был Жирный кот" width="311"
                   height="232">
               </picture>

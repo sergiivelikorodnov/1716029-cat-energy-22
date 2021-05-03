@@ -23,8 +23,7 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
-      csso()
+      autoprefixer()
     ]))
     .pipe(rename("style.css"))
     .pipe(sourcemap.write("."))
