@@ -14,8 +14,10 @@ window.addEventListener('resize', function (event) {
     topHeader.style.height = '65px';
     siteList.style.top = -clientHeight - 65 + 'px';
     navMain.classList.remove('main-nav--opened');
+    navToggle.classList.remove('openned');
   }
 })
+
 
 navToggle.addEventListener('click', function () {
   navMain.classList.toggle('main-nav--opened');

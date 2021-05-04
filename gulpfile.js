@@ -182,9 +182,7 @@ const build = gulp.series(
     html,
     scripts,
     webpImages
-  ),
-  server,
-  watcher
+  )
 );
 
 
