@@ -15,9 +15,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    align-items: baseline;
+    align-items: last baseline;
     padding-top: 18px;
     padding-left: 6px;
+    position: relative;
+    top: -16px;
   }
 }
 

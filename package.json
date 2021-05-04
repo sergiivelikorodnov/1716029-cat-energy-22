@@ -30,7 +30,7 @@
     "build": "gulp build",
     "start": "gulp",
     "htmlmin": "gulp html",
-    "stylesbuild": "gulp stylesbuild"
+    "styles": "gulp styles"
   },
   "browserslist": [
     "last 2 versions",

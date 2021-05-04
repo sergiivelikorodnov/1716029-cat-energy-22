@@ -17,7 +17,7 @@ const sync = require("browser-sync").create();
 
 // Styles
 
-const styles = () => {
+/* const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -31,28 +31,29 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.styles = styles; */
 
 
 // Styles Build
 
-const stylesbuild = (done) => {
+const styles = (done) => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(postcss([csso()]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
   done();
 }
+exports.styles = styles;
 
-exports.stylesbuild = stylesbuild;
+/* exports.stylesbuild = stylesbuild; */
 
 //HTML
 
@@ -68,6 +69,7 @@ exports.html = html;
 
 const scripts = (done) => {
   return gulp.src("source/js/script.js")
+    .pipe(gulp.dest('build/js'))
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -169,7 +171,6 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-
 // Build
 
 const build = gulp.series(
@@ -177,11 +178,14 @@ const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-    stylesbuild,
+    styles,
     html,
     scripts,
     webpImages
-  )
+  ),
+  server,
+  watcher
 );
+
 
 exports.build = build;

@@ -1,6 +1,10 @@
+.extra-products {
+  padding-left: 0;
+}
+
 .extra-products__heading {
   @include font(24px, 26px, $special-black);
-  @include greenline2();
+  @include greenline();
   margin: 0;
   border-top: 1px $basic-light-grey solid;
   padding-top: 25px;
@@ -55,7 +59,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
+    padding-top: 25px;
+    padding-bottom: 26px;
   }
 }
 
@@ -68,7 +73,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 
@@ -123,6 +128,10 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
+
+    &:first-child {
+      width: 242px;
+    }
   }
 }
 
@@ -139,9 +148,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 8px 26px 9px 26px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 8px 26px 8px 26px;
   }
 }
 
