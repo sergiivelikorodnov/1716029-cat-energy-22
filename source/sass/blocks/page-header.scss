@@ -1,12 +1,13 @@
 .page-header {
   position: relative;
-  padding-bottom: 22px;
+  padding-bottom: 19px;
 
   @media (min-width: $tablet-width) {
     min-height: 950px;
     padding-top: 20px;
     padding-right: 30px;
     padding-left: 30px;
+    padding-bottom: 22px;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,13 +71,13 @@
   @media (min-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 36px;
-    padding-left: 67px;
+    padding-left: 87px;
     background: none;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 420px;
-    padding-top: 104px;
+    padding-top: 108px;
     padding-bottom: 38px;
     padding-left: 78px;
   }
@@ -88,7 +89,7 @@
   transition: all 0.75s ease-in-out;
 
   @media (max-width: $mobile-width-only) {
-    height: 70px;
+    height: 64px;
   }
 
   @media (min-width: $tablet-width) {
@@ -109,16 +110,24 @@
   margin-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 191px;
 
   @media (min-width: $tablet-width) {
     width: 174px;
     margin-left: 0;
-    padding-top: 3px;
+    padding-top: 6px;
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
+    padding-top: 3px;
+    padding-bottom: 7px;
   }
+}
+
+.page-header__logo-picture img {
+  width: 202px;
+  margin: 0;
 }
 
 .page-header__title {
@@ -204,7 +213,7 @@
     @include font-size(20px, 20px);
     width: 244px;
     padding: 17px 0;
-    margin-left: 65px;
+    margin-left: 82px;
   }
 
   @media (min-width: $desktop-width) {

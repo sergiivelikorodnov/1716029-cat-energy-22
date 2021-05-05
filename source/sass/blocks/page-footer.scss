@@ -11,8 +11,12 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 37px;
     padding-bottom: 30px;
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 36px;
   }
 }
 
@@ -91,7 +95,7 @@
   transition: all 0.35s ease-in-out;
 
   @media (min-width: $tablet-width) {
-    padding: 8px 0 14px 0;
+    padding: 6px 3px 14px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -105,6 +109,10 @@
 
     @media (min-width: $tablet-width) {
       margin-left: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 22px;
     }
   }
 
@@ -125,13 +133,17 @@
   padding-top: 40px;
   position: relative;
   border-bottom: 1px $grey-line solid;
-  padding-bottom: 34px;
+  padding-bottom: 31px;
   transition: all 0.35s ease-in-out;
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 27px;
   }
 
   &:hover {

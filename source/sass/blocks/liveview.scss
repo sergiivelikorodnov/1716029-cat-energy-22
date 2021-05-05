@@ -41,7 +41,7 @@
 .liveview__achievements {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 27px;
   padding-top: 10px;
 
   @media (min-width: $tablet-width) {
@@ -59,9 +59,19 @@
 
 .liveview__cats-wrapper--fat img {
   width: 311px;
+  position: relative;
+  left: -5px;
 
   @media (min-width: $tablet-width) {
     width: 677px;
+    top: -27px;
+    left: 0;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -6px;
+    left: -4px;
   }
 }
 
@@ -72,9 +82,7 @@
 
 .liveview__cats-wrapper--skinny {
   width: 311px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
+  margin: 0 auto;
   right: 0;
   position: relative;
 
@@ -87,15 +95,14 @@
   background-image: url("../img/cat-skinny-small.png"), linear-gradient(180deg, #eaeaea 0%, #eaeaea 100%);
   background-size: cover;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   max-width: 311px;
   height: 240px;
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/cat-skinny.png"), linear-gradient(180deg, #ffffff 0%, #ffffff 183px, #eaeaea 183px, #eaeaea 100%);
-    bottom: 22px;
-    left: 0;
+    background-image: url("../img/cat-skinny.png"), linear-gradient(180deg, #ffffff 0%, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
+    bottom: 25px;
     background-size: cover;
     max-width: 677px;
     overflow: hidden;
@@ -208,7 +215,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -247,7 +254,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -268,7 +275,7 @@
 .liveview__compare p {
   @include font(16px, 20px, $basic-black);
   @include font-uppercase;
-  padding: 0 14px 0 17px;
+  padding: 0 17px 0 19px;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 29px);
@@ -278,12 +285,12 @@
 
 
 .liveview__drag-slider {
-  padding-top: 20px;
+  padding-top: 30px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, $basic-white 0%, $basic-white 34%, $section-grey 34%, $section-grey 100%);
-    padding-top: 54px;
+    padding-top: 93px;
     padding-bottom: 88px;
   }
 
@@ -302,7 +309,7 @@
   cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
-    width: 76px;
+    width: 84px;
   }
 
   @media (min-width: $tablet-width) {
@@ -310,15 +317,11 @@
   }
 
   position: relative;
-  left: -3px;
+  left: 5px;
+  top: 5px;
   width: 428px;
   background: transparent;
-  --webkit-appearance: none;
-  --moz-appearance: none;
-
-  &::-webkit-slider-thumb {
-    --webkit-appearance: none;
-  }
+  appearance: none;
 
   &:focus {
     outline: none;
@@ -337,46 +340,79 @@
     color: transparent;
   }
 
-  &::-moz-range-thumb,
-  &::-webkit-slider-thumb {
+  &::-moz-range-thumb {
+    appearance: none;
     border: none;
 
     @media (max-width: $mobile-width-only) {
       @include size(35px, 6px);
       display: block;
-      background: url("../img/slider-control-small.svg");
+      background: url("../img/slider-control-small.svg") center center no-repeat;
       background-size: 35px 6px;
       position: absolute;
       top: 3px;
-      left: 10px;
+      padding-left: 10px;
     }
 
     @media (min-width: $tablet-width) {
       @include size(34px, 34px);
       display: block;
-      background: url("../img/slider-control.svg");
+      background: url("../img/slider-control.svg") center center no-repeat;
       filter: drop-shadow(0 1px 3px $basic-shadow);
       background-size: 34px 34px;
       border-radius: 50%;
       box-sizing: border-box;
       position: absolute;
-      top: -15px;
-      left: 199px;
+      top: -13px;
     }
   }
 
-  &:active::-moz-range-thumb,
-  &:active::-webkit-slider-thumb,
-  &:focus::-moz-range-thumb,
+  &::-webkit-slider-thumb {
+    appearance: none;
+    border: none;
+
+    @media (max-width: $mobile-width-only) {
+      @include size(35px, 6px);
+      background: url("../img/slider-control-small.svg") center center no-repeat;
+      background-size: 35px 6px;
+      position: relative;
+      top: 3px;
+    }
+
+    @media (min-width: $tablet-width) {
+      @include size(34px, 34px);
+      background: url("../img/slider-control.svg") center center no-repeat;
+      filter: drop-shadow(0 1px 3px $basic-shadow);
+      background-size: 34px 34px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      position: relative;
+      top: -15px;
+    }
+  }
+
   &:focus::-webkit-slider-thumb {
     @media (min-width: $tablet-width) {
       border: 1px $basic-green solid;
     }
   }
 
+  &:focus::-moz-range-thumb {
+    @media (min-width: $tablet-width) {
+      border: 1px $basic-green solid;
+    }
+  }
 
-  &::-moz-range-track,
-  &::-webkit-slider-runnable-track {
+
+  &::-moz-range-track {
+    @include size(428px, 6px);
+    background-color: $special-grey;
+    border: 1px solid $special-grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+    appearance: none;
+
     @media (max-width: $mobile-width-only) {
       @include size(84px, 14px);
       background-color: $basic-white;
@@ -386,12 +422,28 @@
       position: relative;
       margin: 0 2px 0 2px;
     }
+  }
 
+
+  &::-webkit-slider-runnable-track {
     @include size(428px, 6px);
     background-color: $special-grey;
     border: 1px solid $special-grey;
     box-sizing: border-box;
     border-radius: 6px;
     position: relative;
+    appearance: none;
+
+    @media (max-width: $mobile-width-only) {
+      @include size(85px, 14px);
+      background-color: $basic-white;
+      border: 1px solid $special-grey;
+      box-sizing: border-box;
+      border-radius: 6px;
+      position: relative;
+      margin: 0 2px 0 2px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 }

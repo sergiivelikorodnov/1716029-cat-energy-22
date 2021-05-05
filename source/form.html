@@ -14,6 +14,7 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!--================ Vendor CSS ================-->
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -21,7 +22,7 @@
   <header class="page-header page-header__subpages">
     <div class="page-header__top">
       <a href="index.html" class="page-header__logo">
-        <picture>
+        <picture class="page-header__logo-picture">
           <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
           <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
@@ -63,15 +64,15 @@
         <fieldset class="form__fieldset form__feature">
           <div class="form__fieldset-wrap">
             <div class="form__fieldset-container form__fieldset-container--margin">
-              <label class="form__label" for="form-name">Имя:<sup>*</sup></label>
+              <label class="form__label form__label--aligner" for="form-name">Имя:<sup>*</sup></label>
               <input class="form__input" id="form-name" type="text" name="stats" placeholder="Барсик" required>
             </div>
             <div class="form__fieldset-container form__fieldset-container--margin">
-              <label class="form__label" for="form-weight">Вес (кг):<sup>*</sup></label>
+              <label class="form__label form__label--aligner" for="form-weight">Вес (кг):<sup>*</sup></label>
               <input class="form__input" id="form-weight" type="text" name="stats" placeholder="7" required>
             </div>
             <div class="form__fieldset-container form__fieldset-container--margin">
-              <label class="form__label" for="form-age">Возраст (лет):</label>
+              <label class="form__label form__label--aligner" for="form-age">Возраст (лет):</label>
               <input class="form__input" id="form-age" type="text" name="stats" placeholder="7">
             </div>
           </div>
