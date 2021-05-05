@@ -11,27 +11,10 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const svgstore = require("gulp-svgstore");
-/* const svgmin = require('gulp-svgmin'); */
+const svgmin = require('gulp-svgmin');
+const newer = require('gulp-newer');
 const del = require("del");
 const sync = require("browser-sync").create();
-
-// Styles
-
-/* const styles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(rename("style.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
-}
-
-exports.styles = styles; */
 
 
 // Styles Build
@@ -52,8 +35,6 @@ const styles = (done) => {
   done();
 }
 exports.styles = styles;
-
-/* exports.stylesbuild = stylesbuild; */
 
 //HTML
 
@@ -82,9 +63,10 @@ exports.scripts = scripts;
 //Optimize Images
 const optimizeImages = () => {
   return gulp.src("source/img/*.{jpg,png,svg}")
+    .pipe(newer("build/img"))
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo({
         plugins: [
           { removeViewBox: true },
@@ -99,7 +81,7 @@ exports.images = optimizeImages;
 
 //Webp Images
 const webpImages = (done) => {
-  gulp.src("build/img/**/*.{jpg,png,svg}")
+  gulp.src("build/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 50 }))
     .pipe(gulp.dest("build/img"));
 
@@ -110,7 +92,7 @@ exports.webp = webpImages;
 
 //SVG Sprite
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
@@ -125,8 +107,9 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "source/favicon",
     "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "!source/img/sprite/*.svg"
   ], {
     base: "source"
   })
@@ -149,7 +132,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -165,11 +148,8 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 // Build
 
@@ -181,9 +161,13 @@ const build = gulp.series(
     styles,
     html,
     scripts,
+    sprite,
     webpImages
   )
 );
 
-
 exports.build = build;
+
+exports.default = gulp.series(
+  build, server, watcher
+);
