@@ -41,13 +41,13 @@
 
   @media (max-width: $mobile-width-only) {
     padding: 10px 26px 10px 26px;
-    margin-bottom: 17px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 0);
     width: 100%;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 }
 
@@ -85,10 +85,10 @@
 }
 
 .form__options {
-  padding-bottom: 22px;
+  padding-bottom: 17px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 35px;
+    padding-bottom: 37px;
   }
 }
 
@@ -99,7 +99,7 @@
   border-bottom: 1px $basic-light-grey solid;
   border-top: 1px $basic-light-grey solid;
   padding-top: 24px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -197,11 +197,11 @@
     @media (min-width: $tablet-width) {
       @include font-size(36px, 36px);
       display: inline;
-      padding-left: 63px;
+      padding-left: 69px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 67px;
+      padding-left: 73px;
     }
   }
 }
@@ -545,12 +545,12 @@
     gap: 55px;
     grid-row-gap: 20px;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 36px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
     padding-top: 0;
     grid-gap: 77px;
   }
