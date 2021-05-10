@@ -137,7 +137,7 @@
     padding-top: 25px;
   }
 
-  &--option {
+  &-option {
     @media (min-width: $tablet-width) {
       padding-bottom: 40px;
       padding-top: 40px;
@@ -230,22 +230,22 @@
   &:focus {
     border-color: $special-dark-grey;
 
-    ~.form__fieldset-container--icon-phone {
+    ~.form__fieldset-container-icon-phone {
       fill: $basic-green;
     }
 
-    ~.form__fieldset-container--icon-mail {
+    ~.form__fieldset-container-icon-mail {
       stroke: $basic-green;
     }
   }
 }
 
-.form__fieldset-container--icon-phone {
+.form__fieldset-container-icon-phone {
   transition: all 0.35s ease-in-out;
   fill: $special-dark-grey-2;
 }
 
-.form__fieldset-container--icon-mail {
+.form__fieldset-container-icon-mail {
   transition: all 0.35s ease-in-out;
   stroke: $special-dark-grey-2;
 }

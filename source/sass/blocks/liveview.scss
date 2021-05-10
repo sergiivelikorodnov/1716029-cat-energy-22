@@ -57,7 +57,7 @@
 }
 
 
-.liveview__cats-wrapper-fat img {
+.liveview__cats-wrapper-fat {
   width: 311px;
   position: relative;
   left: -5px;
@@ -137,6 +137,7 @@
 .liveview__description {
   @include font(14px, 18px, $special-dark-grey, 400, $secondary-font-family);
   padding-top: 20px;
+  letter-spacing: -0.1px;
 
   @media (min-width: $tablet-width) {
     @include font-size(16px, 24px);
@@ -261,13 +262,13 @@
     padding-bottom: 57px;
     position: absolute;
     transform: translateX(-50%);
-    bottom: -6px;
+    bottom: -10px;
     left: 50%;
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 40px;
-    bottom: -118px;
+    bottom: -122px;
     left: 53%;
   }
 }
@@ -275,11 +276,15 @@
 .liveview__compare p {
   @include font(16px, 20px, $basic-black);
   @include font-uppercase;
-  padding: 0 17px 0 19px;
+  padding: 0 14px 0 19px;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 29px);
-    padding: 0 21px 0 21px;
+    line-height: 36px;
+    padding: 0;
+    border-bottom: 1px $basic-black dotted;
+    margin-left: 21px;
+    margin-right: 21px;
   }
 }
 
@@ -291,7 +296,7 @@
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, $basic-white 0%, $basic-white 34%, $section-grey 34%, $section-grey 100%);
     padding-top: 93px;
-    padding-bottom: 88px;
+    padding-bottom: 86px;
   }
 
   @media (min-width: $desktop-width) {

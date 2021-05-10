@@ -41,7 +41,8 @@ exports.styles = styles;
 const html = (done) => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
   done();
 }
 exports.html = html;
@@ -109,6 +110,7 @@ const copy = (done) => {
     "source/*.ico",
     "source/favicon",
     "source/img/**/*.svg",
+    "source/css/*.css",
     "!source/img/sprite/*.svg"
   ], {
     base: "source"
@@ -147,9 +149,11 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html"), gulp.series("html");
   gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
+
+
 
 // Build
 
