@@ -14,22 +14,25 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!--================ Vendor CSS ================-->
-  <link href="css/normalize.css" rel="stylesheet">
+  <!-- <link href="css/normalize.css" rel="stylesheet"> -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__top page-header__wrap">
+    <div class="page-header__top page-header__wrap page-header__top--nojs">
       <a class="page-header__logo">
-        <picture class="page-header__logo-picture">
+        <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
-          <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+          <img class="page-header__logo-picture" src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191"
+            height="38">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню"></button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню">
+          <span class="main-nav__toggle-button"></span>
+        </button>
         <ul class="main-nav__list site-list list-reset">
           <li class="site-list__item site-list__item--active site-list__item--active-white">
             <a>
@@ -157,12 +160,12 @@
         <div class="liveview__drag-slider">
           <div class="liveview__cats">
             <div class="liveview__cats-wrapper">
-              <picture class="liveview__cats-wrapper-fat">
+              <picture>
                 <source media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x" type="img/webp">
                 <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
                 <source srcset="img/cat-fat-small.webp 1x, img/cat-fat-small@2x.webp 2x" type="img/webp">
-                <img src="img/cat-fat-small.png" srcset="img/cat-fat-small@2x.png 2x" alt="Был Жирный кот" width="311"
-                  height="232">
+                <img class="liveview__cats-wrapper-fat" src="img/cat-fat-small.png" srcset="img/cat-fat-small@2x.png 2x"
+                  alt="Был Жирный кот" width="311" height="232">
               </picture>
               <figure class="liveview__cats-wrapper-skinny">
                 <div class="liveview__divisor" id="compare"></div>

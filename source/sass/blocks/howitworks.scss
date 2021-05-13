@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 100px;
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
@@ -27,8 +27,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 137px;
     column-gap: 79px;
-    padding-top: 75px;
-    padding-bottom: 20px;
+    padding-top: 74px;
+    padding-bottom: 22px;
   }
 }
 
@@ -120,7 +120,7 @@
     z-index: -1;
 
     @media (min-width: $desktop-width) {
-      left: 118px;
+      left: 114px;
     }
 
     &::before {

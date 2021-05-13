@@ -2,13 +2,14 @@
   @include font-uppercase;
   @include font(14px, 18px, $basic-black);
   padding-top: 35px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   width: 270px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 30px, $basic-black);
-    padding-top: 55px;
+    padding-top: 53px;
+    padding-bottom: 10px;
     width: 350px;
   }
 

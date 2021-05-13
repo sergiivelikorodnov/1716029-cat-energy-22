@@ -8,32 +8,37 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 10px;
+    padding-top: 7px;
     border-bottom: none;
     align-items: baseline;
-    padding-left: 6px;
+    padding-left: 5px;
   }
 
   @media (min-width: $desktop-width) {
-    align-items: last baseline;
     padding-top: 18px;
     padding-left: 6px;
     position: relative;
-    top: -16px;
+    top: -3px;
   }
 }
 
 .footer-social li {
   display: inline-block;
-  padding-right: 35px;
+  padding-right: 29px;
+  margin-right: 6px;
 
   &:last-child {
     padding-right: 0;
+    margin-right: 0;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 15px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding-right: 0;
-    padding-left: 24px;
+    padding-left: 20px;
   }
 }
 

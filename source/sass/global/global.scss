@@ -93,7 +93,7 @@ body {
 
   @media (min-width: $tablet-width) {
     @include font-size(60px, 60px);
-    padding-top: 31px;
+    padding-top: 30px;
   }
 
   @media (min-width: $desktop-width) {

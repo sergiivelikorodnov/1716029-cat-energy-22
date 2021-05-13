@@ -4,7 +4,8 @@
 
 .footer-contacts__aligner {
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     position: absolute;
     top: 49%;
     transform: translateY(-50%) translateX(-50%);
@@ -16,10 +17,10 @@
 
 .footer-contacts__wrapper {
   background-color: $basic-white;
-  padding-bottom: 25px;
-  padding-left: 20px;
+  padding-bottom: 26px;
+  padding-left: 18px;
   padding-right: 22px;
-  padding-top: 29px;
+  padding-top: 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +52,7 @@
 .footer-contacts__title {
   @include font(16px, 18px, $special-black);
   @include font-uppercase;
-  max-width: 138px;
+  max-width: 142px;
 
   @media (min-width: $tablet-width) {
     @include font-size(20px, 25px);
