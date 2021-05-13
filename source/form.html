@@ -14,22 +14,24 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!--================ Vendor CSS ================-->
-  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header__subpages">
-    <div class="page-header__top">
+  <header class="page-header page-header--subpages">
+    <div class="page-header__top page-header__top--nojs">
       <a href="index.html" class="page-header__logo">
-        <picture class="page-header__logo-picture">
+        <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-header-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-header-tablet.svg">
-          <img src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191" height="38">
+          <img class="page-header__logo-picture" src="img/logo-header-mobile.svg" alt="Кэт энерджи лого" width="191"
+            height="38">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню"></button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть/Закрыть меню">
+          <span class="main-nav__toggle-button"></span>
+        </button>
         <ul class="main-nav__list site-list list-reset">
           <li class="site-list__item">
             <a href="index.html">
@@ -104,12 +106,12 @@
         <h3 class="form__fieldset-title">
           <span>Контактные данные (владельца кота)</span>
         </h3>
-        <div class="form__fieldset-wrap form__contacts--option">
+        <div class="form__fieldset-wrap form__contacts-option">
           <div class="form__fieldset-container form__fieldset-container--icon">
             <label class="form__label" for="form-mail">E-mail:<sup>*</sup></label>
             <input class="form__input" id="form-mail" type="email" name="form-mail" placeholder="kuklachev@gmail.com"
               required>
-            <svg class="form__fieldset-container--icon-mail" width="20" height="15">
+            <svg class="form__fieldset-container-icon-mail" width="20" height="15">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
           </div>
@@ -118,7 +120,7 @@
             <input class="form__input" id="form-phone" type="tel" name="form-phone" placeholder="8 (960) 900-60-90"
               required>
 
-            <svg class="form__fieldset-container--icon-phone" width="20" height="21">
+            <svg class="form__fieldset-container-icon-phone" width="20" height="21">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
           </div>

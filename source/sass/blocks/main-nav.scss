@@ -14,18 +14,28 @@
 
 .main-nav {
   text-align: right;
+  height: 5px;
 }
 
-.main-nav--closed .main-nav__toggle {
-  @include size(24px, 2px);
-  display: inline-block;
+.main-nav__toggle {
+  @include size(24px, 24px);
   position: absolute;
-  background-color: $basic-black;
+  top: 15px;
+  right: 20px;
   padding: 0;
   border: none;
   cursor: pointer;
-  top: 30px;
-  right: 20px;
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle-button {
+  @include size(24px, 2px);
+  display: inline-block;
+  background-color: $basic-black;
   transition: all 0.35s ease-in-out;
   z-index: 2;
 
@@ -48,7 +58,9 @@
   }
 
   &.openned {
+    @include size(24px, 24px);
     background-color: $basic-white;
+    padding-top: 15px;
 
     &::before {
       transform-origin: 12px -2px;
@@ -67,6 +79,7 @@
     display: none;
   }
 }
+
 
 .main-nav--closed .site-list {
   @media (max-width: $mobile-width-only) {
@@ -127,11 +140,6 @@
 .main-nav--nojs .site-list {
   @media (max-width: $mobile-width-only) {
     display: block;
-  }
-}
-
-.main-nav__toggle {
-  @media (min-width: $tablet-width) {
-    display: none;
+    top: -2px;
   }
 }
