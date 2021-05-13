@@ -160,7 +160,6 @@
       display: grid;
       padding-top: 20px;
       padding-bottom: 20px;
-      /* padding-top: 0; */
       grid-template-columns: 570px 1fr;
       grid-gap: 75px;
     }
@@ -578,7 +577,6 @@
 
 .form__button-area {
   @media (min-width: $tablet-width) {
-    /* @include padding-left-right(70px, 65px); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;

@@ -97,45 +97,8 @@
 .main-nav--opened .site-list {
   @media (max-width: $mobile-width-only) {
     position: relative;
-    /* top: 0; */
   }
 }
-
-/* .main-nav--opened .main-nav__toggle {
-  background-color: $basic-white;
-  border: none;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 20px;
-  right: 15px;
-
-  &::before {
-    transform-origin: 9px -6px;
-    transform: rotate(45deg);
-    content: "";
-    display: block;
-    background-color: $basic-black;
-    width: 27px;
-    height: 2px;
-  }
-
-  &::after {
-    transform-origin: 8px 8px;
-    transform: rotate(-45deg);
-    content: "";
-    display: block;
-    background-color: $basic-black;
-    width: 27px;
-    height: 2px;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-} */
-
 
 .main-nav--nojs .site-list {
   @media (max-width: $mobile-width-only) {

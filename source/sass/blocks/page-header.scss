@@ -12,13 +12,11 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    /* max-width: 1440px; */
     min-height: 694px;
     margin: 0 auto;
     padding-top: 50px;
     padding-right: 112px;
     padding-left: 112px;
-    /* margin-bottom: 82px; */
     background-image: linear-gradient(90deg, $background-overlay 50%, $background-overlay 50%), url("../img/promo-big.jpg");
     background-repeat: no-repeat;
     background-position: right top, right top;

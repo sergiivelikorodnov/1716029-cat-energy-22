@@ -44,7 +44,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    /* @include background-size(200px, 212px); */
     @include size(200px, 212px);
     @include align-vertical();
     background-size: cover;
@@ -53,12 +52,10 @@
 
   @media (min-width: $desktop-width) {
     @include size(100px, 106px);
-    /* @include background-size(100px, 106px); */
     top: 95px;
     left: 52px;
   }
 }
-
 
 .catalog__article--pro::before {
   @include size(67px, 50px);
@@ -74,7 +71,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    /* @include background-size(268px, 200px); */
     @include size(268px, 200px);
     @include align-vertical();
     background-size: cover;
@@ -83,7 +79,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    /* @include background-size(134px, 100px); */
     @include size(134px, 100px);
     top: 99px;
     left: 33px;
@@ -99,11 +94,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  /*   @media (min-width: $tablet-width) {
-    padding: 53px;
-    padding-bottom: 58px;
-  } */
 
   @media (min-width: $tablet-width) {
     padding-left: 53px;
